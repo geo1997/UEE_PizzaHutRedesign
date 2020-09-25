@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:text="Italian"
             android:layout_toEndOf="@+id/iv_image"
-            tools:ignore="RtlCompat" />
+            />
     </RelativeLayout>
 </com.google.android.material.card.MaterialCardView>
 </RelativeLayout>
