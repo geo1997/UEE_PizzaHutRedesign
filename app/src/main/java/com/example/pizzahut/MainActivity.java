@@ -19,6 +19,8 @@ import androidx.appcompat.widget.Toolbar;
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
+    private static final int HOME_FRAGMENT = 0;
+    private static final int CART_FRAGMENT = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,5 +61,9 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+
+    public void myCart(){
+        invalidateOptionsMenu();
     }
 }
