@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/promos"
+    tools:context=".promosActivity">
+
+    <ImageView
+        android:layout_width="168dp"
+        android:layout_height="56dp"
+        android:cropToPadding="true"
+        android:layout_marginTop="50dp"
+        android:focusable="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/promo_button"
+        android:id="@+id/promoLogo"
+       />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/promoLogo"
+        android:background="@drawable/menu_layout"
+        android:paddingTop="10dp"
+        android:elevation="10dp"
+        android:alpha="0.9"
+        android:id="@+id/promosList">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>
