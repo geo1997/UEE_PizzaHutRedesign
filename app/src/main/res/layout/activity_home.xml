@@ -38,9 +38,9 @@
 
     <Button
         android:id="@+id/btnMenu"
-        android:layout_width="280dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="300dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="07dp"
         android:background="@drawable/menu_button"
         android:layout_below="@id/upper"
         android:drawableLeft="@drawable/food_menu"
@@ -56,7 +56,6 @@
 
 
     </Button>
-
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"

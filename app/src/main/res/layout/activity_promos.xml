@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/promos"
+    android:background="@drawable/promos_page"
     tools:context=".promosActivity">
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -21,20 +21,22 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <ImageView
-        android:layout_width="168dp"
-        android:layout_height="56dp"
+        android:id="@+id/promoLogo"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_marginTop="40dp"
+
         android:cropToPadding="true"
-        android:layout_marginTop="50dp"
         android:focusable="true"
         android:scaleType="centerCrop"
-        android:src="@drawable/promo_button"
-        android:id="@+id/promoLogo"
-       />
+        android:src="@drawable/btn_promo" />
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/promoLogo"
-        android:background="@drawable/menu_layout"
+        android:layout_marginTop="20dp"
         android:paddingTop="10dp"
         android:elevation="10dp"
         android:alpha="0.9"

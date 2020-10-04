@@ -58,7 +58,6 @@ public class Promo extends RecyclerView.Adapter<Promo.ViewHolder> {
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(mContext,pList.get(position).getImage(),Toast.LENGTH_SHORT).show();
                 Intent intent=new Intent(mContext, promoDetailActivity.class);
                 intent.putExtra("promoImg",promItem.getImage());
                 intent.putExtra("promoDe",promItem.getPromDetails());

@@ -28,14 +28,26 @@ public class homeActivity extends AppCompatActivity implements View.OnClickListe
     Button btnMenu,btnAcc;
     ImageSlider promFlip;
     private static final String TAG="promoActivity";
+    private long backPressedTime;
+
+    @Override
+    public void onBackPressed() {
+        if(backPressedTime+2000>System.currentTimeMillis()){
+            super.onBackPressed();
+        }else{
+            Toast.makeText(this,"Press back Again to exit",Toast.LENGTH_SHORT).show();
+        }
+        backPressedTime=System.currentTimeMillis();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         View decorView=getWindow().getDecorView();
-        int uiOption=View.SYSTEM_UI_FLAG_FULLSCREEN;
-        decorView.setSystemUiVisibility(uiOption);
+        int uiOptions=View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;
+        decorView.setSystemUiVisibility(uiOptions);
+
 
         btnMenu=findViewById(R.id.btnMenu);
         btnAcc=findViewById(R.id.btnAccount);

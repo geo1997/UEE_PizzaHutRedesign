@@ -37,7 +37,10 @@
     <string name="register">Register</string>
     <string name="existingUser">Already have an account? Login</string>
 
+    <string name="introT">Topic</string>
+    <string name="btnSkip">Skip >></string>
     <string name="promoDes">Description</string>
+    <string name="promot">*Terms and Conditions Apply </string>
     <string name="promoOptions">Option </string>
     <string name="promoOptionsDe">Tap here and select your pizza(s)</string>
 

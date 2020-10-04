@@ -15,7 +15,6 @@ public class promosActivity extends AppCompatActivity {
 
     RecyclerView promos;
     ArrayList<PromoItem> promosList;
-    private static final String TAG = "promosActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -41,40 +41,69 @@
         android:background="@drawable/promo_details"
         android:nestedScrollingEnabled="true">
 
-        <TextView
+        <LinearLayout
+            android:id="@+id/promoDetails"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:text="@string/promoDes"
-            android:elevation="5dp"
-            android:textSize="25sp"
-            android:gravity="center"
-            android:textColor="@color/colorPromoDe"
-            android:textStyle="bold"
-            android:fontFamily="@font/lucida_sans_unicode"/>
+            android:layout_margin="15dp"
+            android:alpha="0.6"
+            android:background="@color/colorWhite"
+            android:orientation="vertical"
+            android:elevation="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:elevation="5dp"
+                android:fontFamily="@font/lucida_sans_unicode"
+                android:gravity="center"
+                android:text="@string/promoDes"
+                android:textColor="@color/colorPromoDe"
+                android:textSize="25sp"
+                android:textStyle="bold" />
 
 
-        <TextView
-            android:id="@+id/promDText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="36dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:text="text "
-            android:elevation="5dp"
-            android:textSize="18sp"
-            android:textAlignment="inherit"
-            android:textColor="@color/colorPromoDe"
-            android:fontFamily="@font/lucida_sans_unicode"/>
+            <TextView
+                android:id="@+id/promDText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:elevation="5dp"
+                android:fontFamily="@font/lucida_sans_unicode"
+                android:text="text "
+                android:textAlignment="inherit"
+                android:textColor="@color/colorPromoDe"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/promDText2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/promDText"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:elevation="5dp"
+                android:fontFamily="@font/lucida_sans_unicode"
+                android:text="@string/promot"
+                android:textAlignment="inherit"
+                android:textColor="@color/colorPromoDe"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
 
         <androidx.cardview.widget.CardView
             android:id="@+id/btnPromoOption"
-            android:layout_below="@id/promDText"
+            android:layout_below="@id/promoDetails"
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="50dp"
             android:layout_marginRight="10dp"
             android:elevation="10dp"
             style="@style/PromoOptCardView" >

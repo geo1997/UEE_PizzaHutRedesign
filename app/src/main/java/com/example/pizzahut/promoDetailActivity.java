@@ -59,7 +59,7 @@ public class promoDetailActivity extends AppCompatActivity implements View.OnCli
     public void onClick(View view) {
 
         if(view.getId()==R.id.btnPromoOption){
-            Toast.makeText(this,"Option Selected",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"Options Selected",Toast.LENGTH_SHORT).show();
         }
         if(view.getId()==R.id.btnAddToCart){
             Toast.makeText(this,"Item added to the Cart",Toast.LENGTH_SHORT).show();
