@@ -36,4 +36,9 @@
     <string name="confPass">Confirm Password</string>
     <string name="register">Register</string>
     <string name="existingUser">Already have an account? Login</string>
+
+    <string name="promoDes">Description</string>
+    <string name="promoOptions">Option </string>
+    <string name="promoOptionsDe">Tap here and select your pizza(s)</string>
+
 </resources>

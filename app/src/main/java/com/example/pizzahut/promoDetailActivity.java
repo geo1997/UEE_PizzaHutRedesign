@@ -1,15 +1,22 @@
 package com.example.pizzahut;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.pizzahut.adapter.Promo;
 
-public class promoDetailActivity extends AppCompatActivity {
+public class promoDetailActivity extends AppCompatActivity implements View.OnClickListener {
+
+    CardView option;
+    Button addToCart;
 
     private static final String TAG="promoActivity";
     @Override
@@ -18,6 +25,12 @@ public class promoDetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_promo);
         Log.d(TAG,"onCreate:promoActivity");
         getIncomingIntent();
+
+        option=findViewById(R.id.btnPromoOption);
+        addToCart=findViewById(R.id.btnAddToCart);
+
+        option.setOnClickListener(this);
+        addToCart.setOnClickListener(this);
 
     }
 
@@ -39,6 +52,18 @@ public class promoDetailActivity extends AppCompatActivity {
 
         ImageView pro=findViewById(R.id.promDImg);
         pro.setImageResource(image);
+
+    }
+
+    @Override
+    public void onClick(View view) {
+
+        if(view.getId()==R.id.btnPromoOption){
+            Toast.makeText(this,"Option Selected",Toast.LENGTH_SHORT).show();
+        }
+        if(view.getId()==R.id.btnAddToCart){
+            Toast.makeText(this,"Item added to the Cart",Toast.LENGTH_SHORT).show();
+        }
 
     }
 }

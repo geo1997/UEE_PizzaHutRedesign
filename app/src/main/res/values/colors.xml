@@ -13,10 +13,11 @@
     <color name="colorMenuNameButton">#FFFFFF</color>
     <color name="colorUserButton"> #2E9E1D</color>
     <color name="colorRecycler">#F15656</color>
-    <color name="colorBtn"> #A33B3B</color>
-    <color name="colorPromoDe">#c68c53</color>
+    <color name="colorOptionPane">#663300</color>
+    <color name="colorOptionPaneDe">#b97455</color>
+    <color name="colorBtn"> #660000</color>
+    <color name="colorPromoDe">#29293d</color>
     <color name="colorPromoDeBackground">#2E2E2E</color>
-    <color name="colorDetailPromoEnd">#4d3319</color>
     <color name="colorAddToCart"> #2d862d</color>
 
 </resources>

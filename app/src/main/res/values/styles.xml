@@ -12,6 +12,10 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="PromoOptCardView" parent="CardView">
+        <item name="cardBackgroundColor">@color/colorOptionPane</item>
+        <item name="android:radius">30dp</item>
+    </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 

@@ -5,62 +5,119 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/colorPromoDeBackground"
     tools:context=".promoDetailActivity">
 
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
             <ImageView
+
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:scaleType="centerCrop"
                 android:adjustViewBounds="true"
                 android:src="@drawable/most_pop_deal1"
                 android:id="@+id/promDImg"
-                android:elevation="5dp"
-                android:layout_marginTop="50dp"/>
-
-            <TextView
-                android:id="@+id/promDText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:text="text "
-                android:elevation="5dp"
-                android:textSize="20sp"
-                android:textColor="@color/colorPromoDe"
-                android:fontFamily="@font/lucida_sans_unicode"/>
+                android:elevation="20dp"/>
 
     <RelativeLayout
-        android:layout_width="410dp"
-        android:layout_height="match_parent"
         android:layout_marginTop="10dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="15dp"
         android:background="@drawable/promo_details"
-        android:elevation="10sp">
+        android:nestedScrollingEnabled="true">
 
-        <Button
-            android:id="@+id/btnPromoOption"
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginRight="10dp"
-            android:background="@color/colorPromoDe"
-            android:elevation="10dp"
-            android:text="Option" />
-
-        <Button
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/btnPromoOption"
+            android:layout_margin="5dp"
+            android:text="@string/promoDes"
+            android:elevation="5dp"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:textColor="@color/colorPromoDe"
+            android:textStyle="bold"
+            android:fontFamily="@font/lucida_sans_unicode"/>
+
+
+        <TextView
+            android:id="@+id/promDText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:text="text "
+            android:elevation="5dp"
+            android:textSize="18sp"
+            android:textAlignment="inherit"
+            android:textColor="@color/colorPromoDe"
+            android:fontFamily="@font/lucida_sans_unicode"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btnPromoOption"
+            android:layout_below="@id/promDText"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="30dp"
             android:layout_marginRight="10dp"
-            android:layout_marginBottom="10dp"
-            android:background="@color/colorBtn"
             android:elevation="10dp"
+            style="@style/PromoOptCardView" >
+
+            <TextView
+                android:id="@+id/promoOption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/promoOptions"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textColor="@color/colorOptionPaneDe"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/lucida_sans_unicode"
+                android:elevation="10dp"/>
+            <TextView
+                android:layout_marginTop="34dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/promoOptionsDe"
+                android:gravity="center"
+                android:textSize="15dp"
+                android:textColor="@color/colorOptionPaneDe"
+                android:fontFamily="@font/lucida_sans_unicode"
+                android:elevation="10dp"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btnAddToCart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/round_btn"
+            android:elevation="20dp"
             android:gravity="center"
             android:text="Add to Cart"
             android:textColor="@color/colorMenuNameButton"/>
-
 
     </RelativeLayout>
 
