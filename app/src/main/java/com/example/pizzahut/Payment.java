@@ -1,6 +1,7 @@
 package com.example.pizzahut;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
@@ -12,6 +13,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.braintreepayments.cardform.view.CardForm;
+import com.example.pizzahut.ui.Checkout;
 
 public class Payment extends AppCompatActivity {
     CardForm cardForm;
@@ -48,7 +50,8 @@ public class Payment extends AppCompatActivity {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             dialogInterface.dismiss();
-                            Toast.makeText(Payment.this, "Thank you for purchase", Toast.LENGTH_LONG).show();
+                            startActivity(new Intent(Payment.this, Checkout.class));
+                            Toast.makeText(Payment.this, "New Credit Card added", Toast.LENGTH_LONG).show();
                         }
                     });
                     alertBuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {

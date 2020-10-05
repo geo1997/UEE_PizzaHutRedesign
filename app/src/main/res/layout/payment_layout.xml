@@ -26,11 +26,12 @@
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="416dp"
+        android:layout_width="0dp"
         android:layout_height="709dp"
         android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        tools:layout_editor_absoluteX="0dp"
         tools:ignore="MissingConstraints">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -39,13 +40,13 @@
 
             <View
                 android:id="@+id/divider5"
+                style="bold"
                 android:layout_width="0dp"
                 android:layout_height="1dp"
                 android:layout_marginTop="8dp"
-                android:backgroundTint="#000000"
-                style="bold"
-                android:outlineAmbientShadowColor="#000000"
                 android:background="?android:attr/listDivider"
+                android:backgroundTint="#000000"
+                android:outlineAmbientShadowColor="#000000"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -56,10 +57,10 @@
                 android:layout_width="0dp"
                 android:layout_height="1dp"
                 android:layout_marginTop="16dp"
-                android:backgroundTint="#000000"
-                android:outlineSpotShadowColor="#000000"
-                android:outlineAmbientShadowColor="#000000"
                 android:background="?android:attr/listDivider"
+                android:backgroundTint="#000000"
+                android:outlineAmbientShadowColor="#000000"
+                android:outlineSpotShadowColor="#000000"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -92,8 +93,8 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:orientation="vertical"
@@ -105,7 +106,20 @@
             <com.braintreepayments.cardform.view.CardForm
                 android:id="@+id/card_form"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btnBuy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="42dp"
+                    android:layout_marginBottom="27dp"
+                    android:background="@drawable/rounded_corners"
+                    android:text="@string/label_buy_now"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+            </com.braintreepayments.cardform.view.CardForm>
 
         </RelativeLayout>
 
@@ -120,13 +134,12 @@
         app:layout_constraintBottom_toTopOf="@+id/btnBuy"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints,NotSibling" />
 
     <Button
-        android:id="@+id/btnBuy"
+        android:id="@+id/btnBuy2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
