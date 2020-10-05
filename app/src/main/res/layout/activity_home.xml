@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".homeActivity"
+    android:background="@drawable/home_page">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/upper">
+
+        <com.denzcoskun.imageslider.ImageSlider
+            android:id="@+id/promFlip"
+            app:auto_cycle="true"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            app:delay="0"
+            app:period="1000">
+
+        </com.denzcoskun.imageslider.ImageSlider>
+
+        <Button
+            android:id="@+id/btnAccount"
+            android:elevation="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="300dp"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="18dp"
+            android:background="@drawable/user_button"
+            android:drawableLeft="@drawable/user_icon"/>
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnMenu"
+        android:layout_width="300dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="07dp"
+        android:background="@drawable/menu_button"
+        android:layout_below="@id/upper"
+        android:drawableLeft="@drawable/food_menu"
+        android:paddingLeft="1dp"
+        android:drawableRight="@drawable/food_menu_right"
+        android:clickable="true"
+        android:elevation="10dp"
+        android:text="Menu"
+        android:textSize="25dp"
+        android:textColor="@color/colorMenuNameButton"
+        android:textStyle="bold"
+        android:textAlignment="viewStart">
+
+
+    </Button>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="380dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/promDeals">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>
