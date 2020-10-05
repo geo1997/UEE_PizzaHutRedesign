@@ -21,6 +21,22 @@
         <activity android:name=".SignUp" />
         <activity android:name=".Login" />
         <activity
+            android:name=".Payment"
+            android:label=""
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Checkout"
+            android:label=""
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Cart"
+            android:label=""
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FoodDetails"
+            android:label="@string/title_activity_cart"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".promosActivity"
             android:exported="true" />
         <activity android:name=".promoDetailActivity" />
