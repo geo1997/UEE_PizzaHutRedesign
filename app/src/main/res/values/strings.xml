@@ -28,7 +28,6 @@
     <string name="google_icon">google icon</string>
     <string name="facebook_icon">facebook icon</string>
     <string name="facebook">Login with Facebook</string>
-
     <string name="fname">First Name</string>
     <string name="lname">Last Name</string>
     <string name="email">Email</string>
@@ -36,4 +35,19 @@
     <string name="confPass">Confirm Password</string>
     <string name="register">Register</string>
     <string name="existingUser">Already have an account? Login</string>
+
+
+    <string name="title_activity_maps">Map</string>
+    <string name="navbar_myaccount">My Account</string>
+    <string name="navbar_myorders">My Orders</string>
+    <string name="navbar_Address">Address</string>
+    <string name="navbar_resetdetails">Reset Details</string>
+    <string name="navbar_home">Home</string>
+    <string name="navbar_menu">Menu</string>
+    <string name="navbar_promos">Promos</string>
+    <string name="navbar_contactus">Contact US</string>
+    <string name="navbar_storelocator">Store Locator</string>
+    <string name="navbar_logout">Log Out</string>
+    <string name="navbar_slogan">For the Love of Pizza</string>
+
 </resources>

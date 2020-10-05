@@ -1,20 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:showIn="navigation_view">
+   >
 
-    <group android:checkableBehavior="single">
+    <item android:title="Profile">
+        <menu>
+            <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_home"
+            android:id="@+id/nav_account"
             android:icon="@drawable/ic_user"
-            android:title="@string/menu_home" />
+            android:title="@string/navbar_myaccount" />
         <item
             android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
+            android:icon="@drawable/icons8_order_history_24px_2"
+            android:title="@string/navbar_myorders" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
-    </group>
+            android:id="@+id/nav_address"
+            android:icon="@drawable/icons8_home_address_24px"
+            android:title="@string/navbar_Address" />
+        <item
+            android:id="@+id/nav_reset"
+            android:icon="@drawable/icons8_reset_24px"
+            android:title="@string/navbar_resetdetails" />
+
+
+         </group>
+        </menu>
+    </item>
+
+    <item android:title="Food">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_menu"
+                    android:icon="@drawable/icons8_cutlery_24px"
+                    android:title="@string/navbar_menu" />
+                <item
+                    android:id="@+id/nav_promos"
+                    android:icon="@drawable/icons8_sale_24px"
+                    android:title="@string/navbar_promos" />
+                <item
+                    android:id="@+id/nav_contactus"
+                    android:icon="@drawable/icons8_contact_us_24px"
+                    android:title="@string/navbar_contactus" />
+                <item
+                    android:id="@+id/nav_storelocator"
+                    android:icon="@drawable/icons8_location_24px"
+                    android:title="@string/navbar_storelocator" />
+
+                <item
+                    android:id="@+id/nav_home"
+                    android:icon="@drawable/icons8_home_page_24px"
+                    android:title="@string/navbar_home" />
+
+
+            </group>
+        </menu>
+    </item>
+
+
 </menu>
