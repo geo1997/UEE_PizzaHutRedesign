@@ -4,10 +4,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.example.pizzahut.adapter.CartAdapter;
 import com.example.pizzahut.model.CartItem;
-import com.example.pizzahut.ui.Checkout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -51,5 +52,11 @@ public class Cart extends AppCompatActivity {
                 startActivity(new Intent(Cart.this, Checkout.class));
             }
         });
+    }
+
+    public void onLayoutSelected(View view){
+        LinearLayout linearLayout = findViewById(R.id.remove_item_button);
+        Toast.makeText(this,"Item removed from cart",Toast.LENGTH_SHORT).show();
+
     }
 }

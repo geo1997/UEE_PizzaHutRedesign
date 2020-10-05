@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/cardview_light_background"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    tools:context=".Cart">
 
     <ImageView
         android:id="@+id/product_image"
@@ -92,6 +93,7 @@
         android:background="@android:color/darker_gray"
         android:elevation="3dp"
         android:gravity="center"
+        android:onClick="onLayoutSelected"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

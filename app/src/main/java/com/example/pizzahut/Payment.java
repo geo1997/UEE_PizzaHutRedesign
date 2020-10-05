@@ -13,7 +13,6 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.braintreepayments.cardform.view.CardForm;
-import com.example.pizzahut.ui.Checkout;
 
 public class Payment extends AppCompatActivity {
     CardForm cardForm;

@@ -111,22 +111,31 @@
         tools:ignore="MissingConstraints">
 
         <RadioButton
+            android:id="@+id/smallpizza"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="30dp"
             android:button="@drawable/user_50px"
-            android:checked="true" />
+            android:checked="true"
+            android:background="@drawable/radio_box_selector"
+            android:onClick="onSizeSelected" />
 
         <RadioButton
+            android:id="@+id/mediumpizza"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="30dp"
+            android:onClick="onSizeSelected"
+            android:background="@drawable/radio_box_selector"
             android:button="@drawable/user_account_50px" />
 
         <RadioButton
+            android:id="@+id/largepizza"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="30dp"
+            android:onClick="onSizeSelected"
+            android:background="@drawable/radio_box_selector"
             android:button="@drawable/people_50px" />
     </RadioGroup>
 

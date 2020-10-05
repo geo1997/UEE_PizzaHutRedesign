@@ -1,18 +1,14 @@
 package com.example.pizzahut;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
-import androidx.recyclerview.widget.LinearLayoutManager;
-
-import com.example.pizzahut.adapter.CartAdapter;
-import com.example.pizzahut.ui.Checkout;
 
 public class FoodDetails extends AppCompatActivity {
     @Override
@@ -29,5 +25,20 @@ public class FoodDetails extends AppCompatActivity {
                 Toast.makeText(FoodDetails.this, "Item added to cart", Toast.LENGTH_LONG).show();
             }
         });
+    }
+
+    public void onSizeSelected(View view){
+        RadioGroup radioGroup = findViewById(R.id.radioGroup);
+        switch (radioGroup.getCheckedRadioButtonId()){
+            case R.id.smallpizza :
+                Toast.makeText(this,"Small Pizza",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.mediumpizza :
+                Toast.makeText(this,"Medium Pizza",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.largepizza :
+                Toast.makeText(this,"Large Pizza",Toast.LENGTH_SHORT).show();
+                break;
+        }
     }
 }
