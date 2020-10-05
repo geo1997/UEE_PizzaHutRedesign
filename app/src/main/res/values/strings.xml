@@ -50,11 +50,16 @@
     <string name="title_activity_main2">MainActivity</string>
     <string name="label_buy_now">Save</string>
 
+    <string name="btnMenu">MENU</string>
     <string name="introT">Topic</string>
     <string name="btnSkip">Skip >></string>
     <string name="promoDes">Description</string>
     <string name="promot">*Terms and Conditions Apply </string>
     <string name="promoOptions">Option </string>
     <string name="promoOptionsDe">Tap here and select your pizza(s)</string>
+    <string name="deliveryAddressT">Delivery Details</string>
+    <string name="deliveryAddressHint">Enter a new address</string>
+    <string name="deliveryAddressTime">When</string>
+    <string name="deliveryAddressSave">Save</string>
 
 </resources>

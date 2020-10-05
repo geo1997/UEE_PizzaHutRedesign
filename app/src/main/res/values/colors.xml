@@ -20,6 +20,8 @@
     <color name="colorBtn"> #660000</color>
     <color name="colorPromoDe">#29293d</color>
     <color name="colorPromoDeBackground">#2E2E2E</color>
-    <color name="colorAddToCart"> #2d862d</color>
+    <color name="colorDeliveryBox">#CBCBCB</color>
+    <color name="colorDeliveryBoxH"> #464646</color>
+    <color name="coloDeliveryBoxB">#686868</color>
 
 </resources>
