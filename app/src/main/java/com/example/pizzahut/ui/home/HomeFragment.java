@@ -37,8 +37,8 @@ public class HomeFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_home, container, false);
         listView = (ListView) root.findViewById(R.id.list);
 
-        storeDataToList();
-        setDataToList();
+        //storeDataToList();
+        //setDataToList();
 
         return root;
     }

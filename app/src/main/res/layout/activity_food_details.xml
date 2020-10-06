@@ -28,8 +28,8 @@
 
     <ImageView
         android:id="@+id/imageView8"
-        android:layout_width="0dp"
-        android:layout_height="378dp"
+        android:layout_width="406dp"
+        android:layout_height="297dp"
         android:layout_marginTop="8dp"
         android:src="@drawable/bbq_chicken"
         app:layout_constraintEnd_toEndOf="parent"
