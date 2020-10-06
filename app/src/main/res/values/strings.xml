@@ -75,5 +75,23 @@
     <string name="navbar_logout">Log Out</string>
     <string name="navbar_slogan">For the Love of Pizza</string>
 
+    
+
+    <string name="feedback">Feedback Form</string>
+    <string name="feed_fname">John</string>
+    <string name="feed_lname">Silva</string>
+    <string name="feed_phone">0768594316</string>
+    <string name="feed_email">john@gmail.com</string>
+    <string name="inquiry">Inquiry Type</string>
+    <string name="message">Message</string>
+    <string-array name="spinner_items">
+        <item>Contact</item>
+        <item>Order Inquiry</item>
+        <item>Appreciation</item>
+        <item>Complaint</item>
+    </string-array>
+    <string name="submit">Submit</string>
+    <string name="profile">My Account</string>
+    <string name="profile_save">Save</string>
 
 </resources>
