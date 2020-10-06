@@ -20,17 +20,17 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
+
     <ImageView
         android:id="@+id/promoLogo"
         android:layout_width="match_parent"
         android:layout_height="110dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="80dp"
 
         android:cropToPadding="true"
         android:focusable="true"
         android:scaleType="centerCrop"
         android:src="@drawable/btn_promo" />
-
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"

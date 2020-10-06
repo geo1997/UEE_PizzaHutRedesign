@@ -25,7 +25,7 @@ import java.util.List;
 public class homeActivity extends AppCompatActivity implements View.OnClickListener{
     RecyclerView recyclerView;
     ArrayList<PromoItem> promoList;
-    Button btnMenu,btnAcc;
+    Button btnMenu;
     ImageSlider promFlip;
     private static final String TAG="promoActivity";
     private long backPressedTime;
@@ -44,16 +44,11 @@ public class homeActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        View decorView=getWindow().getDecorView();
-        int uiOptions=View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;
-        decorView.setSystemUiVisibility(uiOptions);
-
 
         btnMenu=findViewById(R.id.btnMenu);
-        btnAcc=findViewById(R.id.btnAccount);
+
 
         btnMenu.setOnClickListener(this);
-        btnAcc.setOnClickListener(this);
 
         promFlip=findViewById(R.id.promFlip);
 
@@ -98,9 +93,5 @@ public class homeActivity extends AppCompatActivity implements View.OnClickListe
            Intent menu=new Intent(this,MainActivity.class);
            startActivity(menu);
         }
-        else if(view.getId()==R.id.btnAccount){
-            Toast.makeText(this,"Account Clicked",Toast.LENGTH_SHORT).show();
-        }
-
     }
 }
