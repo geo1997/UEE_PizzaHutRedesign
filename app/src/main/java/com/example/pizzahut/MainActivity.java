@@ -1,18 +1,29 @@
 package com.example.pizzahut;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
+
 import android.widget.LinearLayout;
+
+import android.widget.FrameLayout;
+
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.annotation.NonNull;
+
 import androidx.core.view.GravityCompat;
 import androidx.fragment.app.Fragment;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -20,6 +31,7 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -34,7 +46,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     LinearLayout contentView;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +58,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
          drawer = findViewById(R.id.drawer_layout);
          navigationView = findViewById(R.id.nav_view);
          contentView = findViewById(R.id.contentmainpage);
+
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+
         // Passing each menu ID as a set of Ids because each
 
 
@@ -125,10 +139,24 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 || super.onSupportNavigateUp();
     }
 
-    public void myCart(){
-        invalidateOptionsMenu();
-    }
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+        Fragment fragment = null;
+        if (id==R.id.main_search_icon){
+            return true;
+        }else if(id==R.id.main_notification_icon){
+            Intent intent = new Intent(this,FoodDetails.class);
+            startActivity(intent);
+            return true;
+        }else if (id==R.id.main_cart_icon){
+            Intent intent = new Intent(this,Cart.class);
+            startActivity(intent);
+            return true;
+        }
 
+        return super.onOptionsItemSelected(item);
+    }
 
 
 }

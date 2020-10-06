@@ -9,21 +9,25 @@
     <color name="colorpink">#F8253E</color>
 
 
-    <!--haritha-->
+    <color name="intro">#EEC17E</color>
+    <color name="introDotTransWhite">#cccccc</color>
+
     <color name="colorMenuButton">#656565</color>
     <color name="colorMenuNameButton">#FFFFFF</color>
     <color name="colorUserButton"> #2E9E1D</color>
     <color name="colorRecycler">#F15656</color>
     <color name="colorOptionPane">#663300</color>
-    <color name="colorOptionPaneDe">#b97455</color>
+
+    <color name="colorOptionPaneDe">#F7AD4A</color>
+
     <color name="colorBtn"> #660000</color>
     <color name="colorPromoDe">#29293d</color>
     <color name="colorPromoDeBackground">#2E2E2E</color>
     <color name="colorAddToCart"> #2d862d</color>
 
 
-    <!--George-->
     <color name="ghostwhite">#F5F5F5</color>
+
 
 
 </resources>
