@@ -143,17 +143,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
         Fragment fragment = null;
-        if (id==R.id.main_search_icon){
-            return true;
-        }else if(id==R.id.main_notification_icon){
-            Intent intent = new Intent(this,FoodDetails.class);
-            startActivity(intent);
-            return true;
-        }else if (id==R.id.main_cart_icon){
-            Intent intent = new Intent(this,Cart.class);
-            startActivity(intent);
-            return true;
-        }
+////        if (id==R.id.main_search_icon){
+////            return true;
+////        }else if(id==R.id.main_notification_icon){
+////            Intent intent = new Intent(this,FoodDetails.class);
+////            startActivity(intent);
+////            return true;
+//        }else if (id==R.id.main_cart_icon){
+//            Intent intent = new Intent(this,Cart.class);
+//            startActivity(intent);
+//            return true;
+//        }
 
         return super.onOptionsItemSelected(item);
     }
