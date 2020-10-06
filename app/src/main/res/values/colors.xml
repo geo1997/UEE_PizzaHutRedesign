@@ -7,7 +7,7 @@
     <color name="colorBlack">#000</color>
     <color name="colorWhite">#fff</color>
     <color name="colorpink">#F8253E</color>
-
+    <color name="colorBackground">#131A20</color>
 
     <color name="intro">#EEC17E</color>
     <color name="introDotTransWhite">#cccccc</color>
