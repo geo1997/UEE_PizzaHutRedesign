@@ -51,26 +51,26 @@ public class IntroActivity extends AppCompatActivity implements View.OnClickList
             }
         });
 
-       // sharedPreferences = getSharedPreferences("pizzaIntro", MODE_PRIVATE);
-       // firstTime = sharedPreferences.getBoolean("firstTime", true);
+        sharedPreferences = getSharedPreferences("pizzaIntro", MODE_PRIVATE);
+        firstTime = sharedPreferences.getBoolean("firstTime", true);
 
-        //if (firstTime) {
-                    //SharedPreferences.Editor editor = sharedPreferences.edit();
-                   // firstTime = false;
+        if (firstTime) {
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    firstTime = false;
 
-                  //  editor.putBoolean("firstTime", firstTime);
-                  //  editor.apply();
+                   editor.putBoolean("firstTime", firstTime);
+                    editor.apply();
                           introSliderAdapter=new introSliderAdapter(this);
                           introPager.setAdapter(introSliderAdapter);
                           addDotsIndicator(0);
                           introPager.addOnPageChangeListener(viewListener);
 
-             //   }
-      //  else {
-          // Intent homePage = new Intent(IntroActivity.this, homeActivity.class);
-          //  startActivity(homePage);
-           // finish();
-      //  }
+               }
+       else {
+           Intent homePage = new Intent(IntroActivity.this, homeActivity.class);
+           startActivity(homePage);
+            finish();
+        }
 
     }
 
