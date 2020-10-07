@@ -71,17 +71,31 @@ public class HomeFragment extends Fragment {
         tabLayout=  root.findViewById(R.id.tabLayout);
         viewPager= root.findViewById(R.id.viewPager);
 
+
+
+
+
+
+
+
+        return root;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
         tabLayout.addTab(tabLayout.newTab().setText("Appetizers"));
         tabLayout.addTab(tabLayout.newTab().setText("favorite"));
         tabLayout.addTab(tabLayout.newTab().setText("Deloitte Pizza"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
-
-
-        final MyAdapter adapter = new MyAdapter(context,getFragmentManager(), tabLayout.getTabCount());
+        final MyAdapter adapter = new MyAdapter(context,getChildFragmentManager(), tabLayout.getTabCount());
         viewPager.setAdapter(adapter);
 
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+
+
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -99,43 +113,5 @@ public class HomeFragment extends Fragment {
 
             }
         });
-
-        return root;
-    }
-
-    public void createDummyData() {
-        for (int i = 1; i <= 5; i++) {
-
-            SectionDataModel dm = new SectionDataModel();
-
-            dm.setHeaderTitle("Section " + i);
-
-            ArrayList<SingleItemModel> singleItem = new ArrayList<SingleItemModel>();
-            for (int j = 0; j <= 5; j++) {
-                singleItem.add(new SingleItemModel("Item " + j, "URL " + j));
-            }
-
-            dm.setAllItemsInSection(singleItem);
-
-            allSampleData.add(dm);
-
-        }
-    }
-    private void storeDataToList() {
-
-        dataModels = new ArrayList<>();
-        for(int i =0 ; i<20 ;i++){
-           PizzaModel pizzaModel = new PizzaModel();
-           pizzaModel.setPizzaName("Pizza with ginger");
-           pizzaModel.setPizzaSize("Medium");
-           pizzaModel.setPizzaPrize("24,90");
-
-           dataModels.add(pizzaModel);
-        }
-    }
-
-    private void setDataToList() {
-        adapter = new PizzaAdapter(dataModels, context);
-        listView.setAdapter(adapter);
     }
 }
