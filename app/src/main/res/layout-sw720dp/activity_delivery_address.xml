@@ -7,19 +7,24 @@
     android:background="@drawable/intro_screen"
     tools:context=".DeliveryAddressActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:titleTextColor="#000000">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/pizzahut" />
 
-    </com.google.android.material.appbar.AppBarLayout>
+    </androidx.appcompat.widget.Toolbar>
     <RelativeLayout
              android:layout_width="match_parent"
              android:layout_height="match_parent"
@@ -39,7 +44,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/deliveryAddressT"
-                android:textSize="25dp"
+                android:textSize="35dp"
                 android:textStyle="bold"
                 android:textColor="@color/colorPromoDe"
                 android:gravity="center"
@@ -49,15 +54,15 @@
                 <EditText
                     android:id="@+id/editDelivery"
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
+                    android:layout_height="65dp"
                     android:ems="10"
                     android:padding="15dp"
                     android:background="@drawable/address_box"
-                    android:layout_marginTop="40dp"
+                    android:layout_marginTop="20dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="10dp"
-                    android:textSize="15dp"
+                    android:textSize="25dp"
                     android:inputType="textPostalAddress"
                     android:hint="@string/deliveryAddressHint"
                     android:textColorHint="@color/colorDeliveryBoxH"/>
@@ -67,7 +72,7 @@
             <Button
                 android:id="@+id/btnSliit"
                 android:layout_width="match_parent"
-                android:layout_height="110dp"
+                android:layout_height="200dp"
                 android:background="@drawable/btn_sliit"/>
             <View
                 android:layout_width="match_parent"
@@ -76,7 +81,7 @@
             <Button
                 android:id="@+id/btnIsuru"
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="110dp"
                 android:background="@drawable/btn_isurupura"/>
             <View
                 android:layout_width="match_parent"
@@ -85,7 +90,7 @@
             <Button
                 android:id="@+id/btnKatu"
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="110dp"
                 android:background="@drawable/btn_katugasthota"/>
 
             <TextView
@@ -93,13 +98,13 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:text="@string/deliveryAddressTime"
-                android:textSize="15dp"
+                android:textSize="25dp"
                 android:textStyle="bold"/>
 
             <Button
                 android:id="@+id/btnasap"
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="110dp"
                 android:background="@drawable/btn_asap"/>
             <View
                 android:layout_width="match_parent"
@@ -108,7 +113,7 @@
             <Button
                 android:id="@+id/btnschedule"
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="110dp"
                 android:background="@drawable/btn_schedule"/>
 
             <Button
@@ -120,6 +125,7 @@
                 android:layout_marginRight="10dp"
                 android:background="@drawable/round_btn"
                 android:text="@string/deliveryAddressSave"
+                android:textSize="25dp"
                 android:textColor="@color/colorWhite"
                 android:elevation="10dp"/>
 

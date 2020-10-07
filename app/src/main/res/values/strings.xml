@@ -93,5 +93,5 @@
     <string name="submit">Submit</string>
     <string name="profile">My Account</string>
     <string name="profile_save">Save</string>
-
+    <string name="btnAddToCart">Add to Cart</string>
 </resources>
