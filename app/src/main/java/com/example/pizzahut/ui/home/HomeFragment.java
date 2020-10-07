@@ -73,18 +73,6 @@ public class HomeFragment extends Fragment {
 
 
 
-
-
-
-
-
-        return root;
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-
         tabLayout.addTab(tabLayout.newTab().setText("Appetizers"));
         tabLayout.addTab(tabLayout.newTab().setText("favorite"));
         tabLayout.addTab(tabLayout.newTab().setText("Deloitte Pizza"));
@@ -113,5 +101,12 @@ public class HomeFragment extends Fragment {
 
             }
         });
+
+
+
+
+        return root;
     }
+
+
 }
