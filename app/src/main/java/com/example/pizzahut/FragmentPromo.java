@@ -1,27 +1,35 @@
 package com.example.pizzahut;
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import com.example.pizzahut.adapter.Promo;
 import com.example.pizzahut.model.PromoItem;
 
 import java.util.ArrayList;
 
-public class promosActivity extends AppCompatActivity {
+
+public class FragmentPromo extends Fragment {
 
     RecyclerView promos;
     ArrayList<PromoItem> promosList;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_promos);
+    public View onCreateView(@NonNull LayoutInflater inflater,
+                             ViewGroup container, Bundle savedInstanceState) {
 
-        promos=findViewById(R.id.promosList);
+        View root = inflater.inflate(R.layout.fragment_promo, container, false);
+
+
+
+        promos=root.findViewById(R.id.promosList);
 
 
         promosList=new ArrayList<>();
@@ -49,13 +57,16 @@ public class promosActivity extends AppCompatActivity {
         promosList.add(new PromoItem(7,R.drawable.most_pop_deal7,
                 "This offer mostly suitable for couples who like to have a best offer from the pizza hut. It's contains Large pan pizza with appetizers and 2 coke.You can choose the type of pizzas given option below"));
 
-        LinearLayoutManager layoutManager=new LinearLayoutManager(this);
+        LinearLayoutManager layoutManager=new LinearLayoutManager(getActivity());
         RecyclerView.LayoutManager rLayoutManager=layoutManager;
         promos.setLayoutManager(rLayoutManager);
-        Promo adapter=new Promo(this,promosList);
+        Promo adapter=new Promo(getActivity(),promosList);
         promos.setAdapter(adapter);
 
 
 
+
+
+        return root;
     }
 }

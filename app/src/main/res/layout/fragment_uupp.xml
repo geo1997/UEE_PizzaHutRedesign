@@ -4,7 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".uupp">
+    tools:context=".uupp"
+    android:background="#ffffff"
+    android:clickable="true"
+
+    >
+
+
+   <com.google.android.material.appbar.AppBarLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:theme="@style/AppTheme.AppBarOverlay">
+
+      <androidx.appcompat.widget.Toolbar
+          android:id="@+id/toolbar"
+          android:layout_width="match_parent"
+          android:layout_height="?attr/actionBarSize"
+          android:background="@color/colorPrimary"
+          app:titleTextColor="#000000"
+          app:popupTheme="@style/AppTheme.PopupOverlay">
+
+         <ImageView
+             android:layout_width="wrap_content"
+             android:layout_height="40dp"
+             android:adjustViewBounds="true"
+             app:srcCompat="@drawable/pizzahut" />
+
+      </androidx.appcompat.widget.Toolbar>
+
+   </com.google.android.material.appbar.AppBarLayout>
 
     <TextView
         android:id="@+id/feedbackForm"

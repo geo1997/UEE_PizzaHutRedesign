@@ -60,26 +60,22 @@
             android:screenOrientation="portrait"
             android:name=".Payment"
             android:label=""
-            android:theme="@style/AppTheme.NoActionBar" />
+            />
         <activity
             android:screenOrientation="portrait"
             android:name=".Checkout"
             android:label=""
-            android:theme="@style/AppTheme.NoActionBar" />
+             />
         <activity
             android:screenOrientation="portrait"
             android:name=".Cart"
             android:label=""
-            android:theme="@style/AppTheme.NoActionBar" />
+            />
         <activity
             android:screenOrientation="portrait"
             android:name=".FoodDetails"
             android:label="@string/title_activity_cart"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:screenOrientation="portrait"
-            android:name=".promosActivity"
-            android:exported="true" />
+            />
         <activity
             android:screenOrientation="portrait"
             android:name=".promoDetailActivity" />

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/promos_page"
-    tools:context=".promosActivity">
+    tools:context=".FragmentPromo">
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -28,10 +28,8 @@
     <ImageView
         android:id="@+id/promoLogo"
         android:layout_width="match_parent"
-        android:layout_height="110dp"
-        android:layout_marginTop="40dp"
-
-        android:cropToPadding="true"
+        android:layout_height="55dp"
+        android:layout_marginTop="50dp"
         android:focusable="true"
         android:scaleType="centerCrop"
         android:src="@drawable/btn_promo" />
@@ -41,7 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/promoLogo"
-        android:layout_marginTop="20dp"
+        android:layout_margin="10dp"
         android:paddingTop="10dp"
         android:elevation="10dp"
         android:alpha="0.9"

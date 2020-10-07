@@ -62,7 +62,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         NavigationUI.setupWithNavController(navigationView, navController);
 
 
-
         //Navigation Drawer
         navigationView.bringToFront();
         navigationView.setNavigationItemSelectedListener(this);
@@ -113,9 +112,22 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch(item.getItemId()){
             case R.id.nav_account:
-                getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment,
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,
                         new uupp()).commit();
                 break;
+            case R.id.nav_promos:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,
+                        new FragmentPromo()).commit();
+                break;
+            case R.id.nav_address:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,
+                        new FragmentDeliveryAddress()).commit();
+                break;
+//            case R.id.nav_storelocator:
+//                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,
+//                        new MapsActivity()).commit();
+//                break;
+//
         }
 
         drawer.closeDrawer(GravityCompat.START);

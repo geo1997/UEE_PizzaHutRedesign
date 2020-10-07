@@ -172,16 +172,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             mMap.addMarker(new MarkerOptions().position(Colombo).title("Welcome To Colombo Pizza Hut"));
 
 
-//            for(int i=0;i<arrayList.size();i++){
-//
-//
-//
-//                mMap.addMarker(new MarkerOptions().position(arrayList.get(i)).title(arrayList.get(i).toString()));
-//                mMap.animateCamera(CameraUpdateFactory.zoomTo(16.0f));
-//
-//                mMap.moveCamera(CameraUpdateFactory.newLatLng(arrayList.get(i)));
-//
-//            }
 
             getDeviceLocation();
 
