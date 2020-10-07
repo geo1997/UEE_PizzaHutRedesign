@@ -5,8 +5,8 @@
 
     <ImageView
         android:id="@+id/introImg"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
+        android:layout_width="500dp"
+        android:layout_height="500dp"
         android:layout_marginTop="50dp"
         android:layout_centerHorizontal="true"
         app:srcCompat="@drawable/order_mobile" />
@@ -19,7 +19,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="20dp"
         android:text="@string/introT"
-        android:textSize="40dp"
+        android:textSize="60dp"
         android:textColor="@color/intro"
         android:fontFamily="@font/chremsel_serif_bold"
         android:textStyle="bold"
@@ -35,7 +35,7 @@
         android:layout_marginLeft="50dp"
         android:layout_marginRight="30dp"
         android:text="@string/promoDes"
-        android:textSize="28dp"
+        android:textSize="38dp"
         android:textColor="@color/intro"
         android:fontFamily="@font/chremsel_serif_regular"/>
 </RelativeLayout>

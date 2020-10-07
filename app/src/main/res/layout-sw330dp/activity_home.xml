@@ -6,62 +6,61 @@
     android:layout_height="match_parent"
     tools:context=".homeActivity"
     android:background="@drawable/home_page">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:titleTextColor="#000000">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/pizzahut" />
+
+    </androidx.appcompat.widget.Toolbar>
 
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/upper">
+        android:id="@+id/upper"
+        android:layout_marginTop="55dp">
 
         <com.denzcoskun.imageslider.ImageSlider
             android:id="@+id/promFlip"
             app:auto_cycle="true"
             android:layout_width="match_parent"
-            android:layout_height="220dp"
+            android:layout_height="230dp"
             app:delay="0"
             app:period="1000">
 
         </com.denzcoskun.imageslider.ImageSlider>
-
-        <Button
-            android:id="@+id/btnAccount"
-            android:elevation="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_marginLeft="320dp"
-            android:layout_marginTop="5dp"
-            android:paddingLeft="18dp"
-            android:background="@drawable/user_button"
-            android:drawableLeft="@drawable/user_icon"/>
 
 
     </RelativeLayout>
 
     <Button
         android:id="@+id/btnMenu"
-        android:layout_width="300dp"
-        android:layout_height="84dp"
-        android:layout_marginTop="07dp"
-        android:background="@drawable/menu_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="02dp"
+        android:background="@drawable/menu_btn"
         android:layout_below="@id/upper"
-        android:drawableLeft="@drawable/food_menu"
-        android:paddingLeft="1dp"
-        android:drawableRight="@drawable/food_menu_right"
         android:clickable="true"
         android:elevation="10dp"
-        android:text="@string/btnMenu"
-        android:textSize="38dp"
-        android:fontFamily="@font/chremsel_serif_bold"
-        android:textColor="@color/colorMenuNameButton"
-        android:textStyle="bold"
-        android:textAlignment="viewStart">
-
-
-    </Button>
+        android:textAlignment="viewStart"/>
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="380dp">
+        android:layout_marginTop="450dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
