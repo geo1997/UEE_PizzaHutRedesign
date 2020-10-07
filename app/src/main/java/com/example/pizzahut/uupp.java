@@ -25,14 +25,11 @@ import com.google.android.material.navigation.NavigationView;
 
 
 public class uupp extends Fragment {
-    private AppBarConfiguration mAppBarConfiguration;
-    DrawerLayout drawer;
-    NavigationView navigationView;
-
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
         View root = inflater.inflate(R.layout.fragment_uupp, container, false);
+
         setHasOptionsMenu(true);
 
 
@@ -48,14 +45,6 @@ public class uupp extends Fragment {
     }
 
 
-
-//    @Override
-//    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-//        inflater.inflate(R.menu.main, menu);
-//        super.onCreateOptionsMenu(menu, inflater);
-//
-//
-//    }
 
 
 }
