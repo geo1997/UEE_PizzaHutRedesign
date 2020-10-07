@@ -26,7 +26,5 @@
     <!--George-->
     <style name="navigationTheme">
         <item name="colorPrimary">@color/colorPrimary</item>
-
-
     </style>
 </resources>

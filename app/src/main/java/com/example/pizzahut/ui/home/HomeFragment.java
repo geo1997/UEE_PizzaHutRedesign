@@ -15,6 +15,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.pizzahut.R;
 import com.example.pizzahut.adapter.PizzaAdapter;
 import com.example.pizzahut.model.PizzaModel;
+import com.example.pizzahut.model.RecyclerViewDataAdapter;
+import com.example.pizzahut.model.SectionDataModel;
+import com.example.pizzahut.model.SingleItemModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +29,9 @@ public class HomeFragment extends Fragment {
     ListView listView;
     private static PizzaAdapter adapter;
 
+    ArrayList<SectionDataModel> allSampleData;
+
+
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
@@ -35,15 +41,49 @@ public class HomeFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_home, container, false);
-        listView = (ListView) root.findViewById(R.id.list);
+//        listView = (ListView) root.findViewById(R.id.list);
+//
+//        storeDataToList();
+//        setDataToList();
 
-        storeDataToList();
-        setDataToList();
+//
+        allSampleData = new ArrayList<SectionDataModel>();
 
+        createDummyData();
+
+
+        RecyclerView my_recycler_view = (RecyclerView) root.findViewById(R.id.my_recycler_view);
+
+        my_recycler_view.setHasFixedSize(true);
+
+        RecyclerViewDataAdapter adapter = new RecyclerViewDataAdapter(context, allSampleData);
+
+        my_recycler_view.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
+
+        my_recycler_view.setAdapter(adapter);
+
+        //
         return root;
     }
 
+    public void createDummyData() {
+        for (int i = 1; i <= 5; i++) {
 
+            SectionDataModel dm = new SectionDataModel();
+
+            dm.setHeaderTitle("Section " + i);
+
+            ArrayList<SingleItemModel> singleItem = new ArrayList<SingleItemModel>();
+            for (int j = 0; j <= 5; j++) {
+                singleItem.add(new SingleItemModel("Item " + j, "URL " + j));
+            }
+
+            dm.setAllItemsInSection(singleItem);
+
+            allSampleData.add(dm);
+
+        }
+    }
     private void storeDataToList() {
 
         dataModels = new ArrayList<>();
