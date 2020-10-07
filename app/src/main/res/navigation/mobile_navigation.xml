@@ -40,5 +40,10 @@
         android:name="com.example.pizzahut.ui.MapFragment"
         android:label="fragment_map"
         tools:layout="@layout/fragment_map" />
+<!--    <fragment-->
+<!--        android:id="@+id/fragmentHomePage"-->
+<!--        android:name="com.example.pizzahut.ui.FragmentHomePage"-->
+<!--        android:label="fragment_home_page"-->
+<!--        tools:layout="@layout/fragment_home_page" />-->
 
 </navigation>

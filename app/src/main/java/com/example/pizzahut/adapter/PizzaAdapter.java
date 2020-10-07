@@ -25,6 +25,7 @@ public class PizzaAdapter extends ArrayAdapter<PizzaModel> implements View.OnCli
 
     private static class ViewHolder {
         TextView textViewName, textViewSize, textViewPrice;
+        Button orderNow;
 
     }
 
@@ -62,6 +63,7 @@ public class PizzaAdapter extends ArrayAdapter<PizzaModel> implements View.OnCli
             viewHolder.textViewName = convertView.findViewById(R.id.tv_pizza);
             viewHolder.textViewSize = convertView.findViewById(R.id.tv_medium);
             viewHolder.textViewPrice =  convertView.findViewById(R.id.tv_price);
+            viewHolder.orderNow = convertView.findViewById(R.id.x);
 
 
             result=convertView;
@@ -81,21 +83,18 @@ public class PizzaAdapter extends ArrayAdapter<PizzaModel> implements View.OnCli
         viewHolder.textViewPrice.setText(dataModel.getPizzaPrize());
 
 
-//        viewHolder.buttonApply.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                singleApplyClick(dataModel);
-//            }
-//        });
+        viewHolder.orderNow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                singleApplyClick();
+            }
+        });
 
         return convertView;
     }
 
 
-//    private void singleApplyClick( BuyerModel dataModel){
-//        Intent intent = new Intent(mContext, ConfirmOrderActivity.class);
-//        intent.putExtra("userId",dataModel.getUser().getId());
-//        intent.putExtra("buyerModel",(Serializable)dataModel);
-//        mContext.startActivity(intent);
-//    }
+    private void singleApplyClick(){
+
+    }
 }

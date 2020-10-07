@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -22,6 +23,8 @@ public class Cart extends AppCompatActivity {
     RecyclerView recyclerView;
     ArrayList<CartItem> cartItems;
 
+    ImageView imageViewBack;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +33,7 @@ public class Cart extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        imageViewBack = findViewById(R.id.backBtn);
         recyclerView = findViewById(R.id.cart_items_recyclerview);
 
         cartItems = new ArrayList<>();
@@ -52,6 +56,16 @@ public class Cart extends AppCompatActivity {
                 startActivity(new Intent(Cart.this, Checkout.class));
             }
         });
+
+
+        imageViewBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
+
     }
 
     public void onLayoutSelected(View view){

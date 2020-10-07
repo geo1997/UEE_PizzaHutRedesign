@@ -94,11 +94,13 @@ public class SecondFragment extends Fragment {
     private void storeDataToList() {
 
         dataModels = new ArrayList<>();
-        for(int i =0 ; i<20 ;i++){
+        for(int i =0 ; i<2 ;i++){
             PizzaModel pizzaModel = new PizzaModel();
             pizzaModel.setPizzaName("Pizza with ginger");
             pizzaModel.setPizzaSize("Medium");
             pizzaModel.setPizzaPrize("24,90");
+
+
 
             dataModels.add(pizzaModel);
         }
