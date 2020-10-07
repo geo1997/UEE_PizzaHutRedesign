@@ -1,4 +1,4 @@
-package com.example.pizzahut;
+package com.example.pizzahut.ui;
 
 import android.os.Bundle;
 
@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.pizzahut.R;
 import com.example.pizzahut.adapter.Promo;
 import com.example.pizzahut.model.PromoItem;
 

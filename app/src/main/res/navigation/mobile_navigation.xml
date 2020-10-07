@@ -12,30 +12,28 @@
         tools:layout="@layout/fragment_home" />
 
 
-
-    <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.pizzahut.FragmentPromo"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
-
     <fragment
         android:id="@+id/nav_account"
-        android:name="com.example.pizzahut.uupp"
+        android:name="com.example.pizzahut.ui.FragmentUserProfile"
         android:label="fragment_uupp"
-        tools:layout="@layout/fragment_uupp" />
+        tools:layout="@layout/fragment_userprofile" />
 
     <fragment
-        android:id="@+id/fragmentPromo"
-        android:name="com.example.pizzahut.FragmentPromo"
+        android:id="@+id/nav_promos"
+        android:name="com.example.pizzahut.ui.FragmentPromo"
         android:label="fragment_promo"
         tools:layout="@layout/fragment_promo" />
 
     <fragment
-        android:id="@+id/fragmentDeliveryAddress"
-        android:name="com.example.pizzahut.FragmentDeliveryAddress"
+        android:id="@+id/nav_address"
+        android:name="com.example.pizzahut.ui.FragmentDeliveryAddress"
         android:label="fragment_delivery_address"
         tools:layout="@layout/fragment_delivery_address" />
+    <fragment
+        android:id="@+id/nav_contactus"
+        android:name="com.example.pizzahut.ui.FragmentFeedback"
+        android:label="fragment_feedback"
+        tools:layout="@layout/fragment_feedback" />
 
 
 </navigation>
