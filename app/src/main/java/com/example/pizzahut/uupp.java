@@ -39,19 +39,19 @@ public class uupp extends Fragment {
         ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayShowTitleEnabled(false);
 
 
-        mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home,R.id.nav_slideshow,R.id.nav_account)
-                .setDrawerLayout(drawer)
-                .build();
-
-        NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
-        NavigationUI.setupActionBarWithNavController((AppCompatActivity) getActivity(), navController, mAppBarConfiguration);
-        NavigationUI.setupWithNavController(navigationView, navController);
-
-
-        navigationView.bringToFront();
-        navigationView.setNavigationItemSelectedListener((NavigationView.OnNavigationItemSelectedListener) getActivity());
-        navigationView.setCheckedItem(R.id.nav_menu);
+//        mAppBarConfiguration = new AppBarConfiguration.Builder(
+//                R.id.nav_home,R.id.nav_slideshow,R.id.nav_account)
+//                .setDrawerLayout(drawer)
+//                .build();
+//
+//        NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
+//        NavigationUI.setupActionBarWithNavController((AppCompatActivity) getActivity(), navController, mAppBarConfiguration);
+//        NavigationUI.setupWithNavController(navigationView, navController);
+//
+//
+//        navigationView.bringToFront();
+//        navigationView.setNavigationItemSelectedListener((NavigationView.OnNavigationItemSelectedListener) getActivity());
+//        navigationView.setCheckedItem(R.id.nav_menu);
 
         return root;
     }
