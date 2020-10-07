@@ -62,11 +62,6 @@ public class FragmentPromo extends Fragment {
         promos.setLayoutManager(rLayoutManager);
         Promo adapter=new Promo(getActivity(),promosList);
         promos.setAdapter(adapter);
-
-
-
-
-
         return root;
     }
 }
