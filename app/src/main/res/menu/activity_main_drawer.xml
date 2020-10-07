@@ -11,7 +11,7 @@
             android:icon="@drawable/ic_user"
             android:title="@string/navbar_myaccount" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_myOrders"
             android:icon="@drawable/icons8_order_history_24px_2"
             android:title="@string/navbar_myorders" />
         <item
