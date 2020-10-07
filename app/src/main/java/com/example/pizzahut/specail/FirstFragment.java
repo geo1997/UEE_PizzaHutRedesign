@@ -84,12 +84,17 @@ public class FirstFragment extends Fragment {
         // Inflate the layout for this fragment
         View root = inflater.inflate(R.layout.fragment_first, container, false);
 
+        listView = (ListView) root.findViewById(R.id.list);
 
-                listView = (ListView) root.findViewById(R.id.list);
 
+        return root;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
         storeDataToList();
         setDataToList();
-        return root;
     }
 
     private void storeDataToList() {

@@ -34,10 +34,11 @@
         android:name="com.example.pizzahut.ui.FragmentFeedback"
         android:label="fragment_feedback"
         tools:layout="@layout/fragment_feedback" />
-    <activity
-        android:id="@+id/nav_storelocator"
-        android:name="com.example.pizzahut.MapsActivity"
-        android:label="MapsActivity" />
 
+    <fragment
+        android:id="@+id/nav_storelocator"
+        android:name="com.example.pizzahut.ui.MapFragment"
+        android:label="fragment_map"
+        tools:layout="@layout/fragment_map" />
 
 </navigation>
