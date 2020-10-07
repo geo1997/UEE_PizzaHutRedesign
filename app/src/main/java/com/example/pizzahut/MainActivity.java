@@ -21,7 +21,7 @@ import androidx.navigation.ui.NavigationUI;
 import com.google.android.material.navigation.NavigationView;
 
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private static final int HOME_FRAGMENT = 0;
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home,R.id.nav_slideshow,R.id.nav_account)
+                R.id.nav_home,R.id.nav_slideshow,R.id.nav_account,R.id.fragmentPromo,R.id.fragmentDeliveryAddress)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         //Navigation Drawer
         navigationView.bringToFront();
-        navigationView.setNavigationItemSelectedListener(this);
+        //navigationView.setNavigationItemSelectedListener(this);
         navigationView.setCheckedItem(R.id.nav_menu);
 
         animateNavigationDrawer();
@@ -108,32 +108,32 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
 
     }
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        switch(item.getItemId()){
-            case R.id.nav_account:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,
-                        new uupp()).commit();
-                break;
-            case R.id.nav_promos:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,
-                        new FragmentPromo()).commit();
-                break;
-            case R.id.nav_address:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,
-                        new FragmentDeliveryAddress()).commit();
-                break;
-//            case R.id.nav_storelocator:
+//    @Override
+//    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+//        switch(item.getItemId()){
+//            case R.id.nav_account:
 //                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,
-//                        new MapsActivity()).commit();
+//                        new uupp()).commit();
 //                break;
+//            case R.id.nav_promos:
+//                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,
+//                        new FragmentPromo()).commit();
+//                break;
+//            case R.id.nav_address:
+//                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,
+//                        new FragmentDeliveryAddress()).commit();
+//                break;
+////            case R.id.nav_storelocator:
+////                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,
+////                        new MapsActivity()).commit();
+////                break;
+////
+//        }
 //
-        }
-
-        drawer.closeDrawer(GravityCompat.START);
-
-        return true;
-    }
+//        drawer.closeDrawer(GravityCompat.START);
+//
+//        return true;
+//    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
