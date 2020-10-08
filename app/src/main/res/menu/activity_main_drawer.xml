@@ -31,10 +31,10 @@
     <item android:title="Food">
         <menu>
             <group android:checkableBehavior="single">
-<!--                <item-->
-<!--                    android:id="@+id/nav_home"-->
-<!--                    android:icon="@drawable/icons8_home_page_24px"-->
-<!--                    android:title="@string/navbar_home" />-->
+                <item
+                    android:id="@+id/nav_menu"
+                    android:icon="@drawable/icons8_home_page_24px"
+                    android:title="@string/navbar_home" />
                 <item
                     android:id="@+id/nav_home"
                     android:icon="@drawable/icons8_cutlery_24px"

@@ -41,7 +41,7 @@ public class FragmentHomePage extends Fragment {
         btnMenu=root.findViewById(R.id.btnMenu);
 
 
-        btnMenu.setOnClickListener((View.OnClickListener) getActivity());
+        //btnMenu.setOnClickListener((View.OnClickListener) getActivity());
 
         promFlip=root.findViewById(R.id.promFlip);
 
