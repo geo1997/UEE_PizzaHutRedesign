@@ -1,30 +1,28 @@
-package com.example.pizzahut;
+package com.example.pizzahut.ui;
+
+import android.Manifest;
+import android.content.Context;
+import android.content.pm.PackageManager;
+import android.location.Location;
+import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.fragment.app.FragmentActivity;
-import androidx.navigation.ui.AppBarConfiguration;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.Manifest;
-import android.content.pm.PackageManager;
-import android.location.Location;
-import android.location.LocationManager;
-import android.nfc.Tag;
-import android.os.Bundle;
 import android.util.Log;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.ListView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.example.pizzahut.adapter.PizzaAdapter;
+import com.example.pizzahut.MapsActivity;
+import com.example.pizzahut.R;
 import com.example.pizzahut.adapter.PizzaLocationAdpter;
-import com.example.pizzahut.model.PizzaModel;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -35,13 +33,12 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.android.material.navigation.NavigationView;
-
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
+public class MapFragment extends Fragment implements OnMapReadyCallback {
+    Context context;
 
     private List<String> movieList = new ArrayList<>();
     private PizzaLocationAdpter mAdapter;
@@ -68,12 +65,51 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     LatLng Negombo = new LatLng(7.189464, 79.858734);
     LatLng Colombo = new LatLng(6.927079, 79.861244);
 
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        this.context = context;
+    }
+
+    public View onCreateView(@NonNull LayoutInflater inflater,
+                             ViewGroup container, Bundle savedInstanceState) {
+
+        View root = inflater.inflate(R.layout.fragment_map, container, false);
+
+
+        //
+        RecyclerView recyclerView = root.findViewById(R.id.recyclerView);
+        mAdapter = new PizzaLocationAdpter(movieList);
+        LinearLayoutManager mLayoutManager = new LinearLayoutManager(context);
+        mLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
+        recyclerView.setLayoutManager(mLayoutManager);
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        recyclerView.setAdapter(mAdapter);
+        prepareMovieData();
+
+        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
+        SupportMapFragment mapFragment = (SupportMapFragment) getChildFragmentManager()
+                .findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
+
+
+        arrayList.add(Kalutara);
+        arrayList.add(Kandy);
+        arrayList.add(Hambantota);
+        arrayList.add(Trincomalee);
+        arrayList.add(Negombo);
+        arrayList.add(Colombo);
+        getLocationPermission();
+        //
+
+        return root;
+    }
 
     private void getDeviceLocation(){
         Log.d(TAG,"getDeviceLocation:getting the devices current location");
 
 
-        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(context);
 
         try{
             if(mLocationPermissionsGranted){
@@ -85,14 +121,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         if(task.isSuccessful()){
                             Log.d(TAG, "onComplete: found location!");
                             Location currentLocation = (Location) task.getResult();
-                            Toast.makeText(MapsActivity.this, " current location", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(context, " current location", Toast.LENGTH_SHORT).show();
 
                             moveCamera(new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude()),
                                     DEFAULT_ZOOM,"Current Location");
 
                         }else{
                             Log.d(TAG, "onComplete: current location is null");
-                            Toast.makeText(MapsActivity.this, "unable to get current location", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(context, "unable to get current location", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -119,56 +155,21 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         String[] permissions = {Manifest.permission.ACCESS_FINE_LOCATION,
                 Manifest.permission.ACCESS_COARSE_LOCATION};
 
-        if(ContextCompat.checkSelfPermission(this.getApplicationContext(),
+        if(ContextCompat.checkSelfPermission(context,
                 FINE_LOCATION) == PackageManager.PERMISSION_GRANTED){
-            if(ContextCompat.checkSelfPermission(this.getApplicationContext(),
+            if(ContextCompat.checkSelfPermission(context,
                     COURSE_LOCATION) == PackageManager.PERMISSION_GRANTED){
                 mLocationPermissionsGranted = true;
 
             }else{
-                ActivityCompat.requestPermissions(this,
-                        permissions,
-                        LOCATION_PERMISSION_REQUEST_CODE);
+
+
+                requestPermissions(permissions,LOCATION_PERMISSION_REQUEST_CODE);
             }
         }else{
-            ActivityCompat.requestPermissions(this,
-                    permissions,
-                    LOCATION_PERMISSION_REQUEST_CODE);
+            requestPermissions(permissions,LOCATION_PERMISSION_REQUEST_CODE);
         }
     }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_maps);
-
-
-        RecyclerView recyclerView = findViewById(R.id.recyclerView);
-        mAdapter = new PizzaLocationAdpter(movieList);
-        LinearLayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
-        mLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
-        recyclerView.setLayoutManager(mLayoutManager);
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
-        recyclerView.setAdapter(mAdapter);
-        prepareMovieData();
-
-        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.map);
-        mapFragment.getMapAsync(this);
-
-
-
-        arrayList.add(Kalutara);
-        arrayList.add(Kandy);
-        arrayList.add(Hambantota);
-        arrayList.add(Trincomalee);
-        arrayList.add(Negombo);
-        arrayList.add(Colombo);
-        getLocationPermission();
-
-    }
-
 
     private void prepareMovieData() {
         for(int i =0 ;i<=5;i++) {
@@ -208,11 +209,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             mMap.addMarker(new MarkerOptions().position(Colombo).title("Welcome To Colombo Pizza Hut"));
 
 
-
             getDeviceLocation();
 
-            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
-                    != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this,
+            if (ActivityCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION)
+                    != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(context,
                     Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                 return;
             }
@@ -222,11 +222,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
         // Add a marker in Sydney and move the camera
 
-
-
-
-
-
+    }
 
     }
-}

@@ -26,7 +26,10 @@
     <!--George-->
     <style name="navigationTheme">
         <item name="colorPrimary">@color/colorPrimary</item>
+    </style>
 
-
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/coloDeliveryBoxB</item>
+        <item name="colorControlActivated">@color/colorpink</item>
     </style>
 </resources>
