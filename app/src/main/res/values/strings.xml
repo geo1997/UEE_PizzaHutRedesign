@@ -75,7 +75,6 @@
     <string name="navbar_logout">Log Out</string>
     <string name="navbar_slogan">For the Love of Pizza</string>
 
-    
 
     <string name="feedback">Feedback Form</string>
     <string name="feed_fname">John</string>
@@ -93,5 +92,5 @@
     <string name="submit">Submit</string>
     <string name="profile">My Account</string>
     <string name="profile_save">Save</string>
-
+    <string name="btnAddToCart">Add to Cart</string>
 </resources>

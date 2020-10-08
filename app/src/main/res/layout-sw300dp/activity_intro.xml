@@ -10,7 +10,7 @@
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/introViewPager"
         android:layout_width="match_parent"
-        android:layout_height="790dp">
+        android:layout_height="460dp">
 
     </androidx.viewpager.widget.ViewPager>
 
@@ -31,10 +31,10 @@
         android:layout_height="80dp"
         android:layout_below="@id/introViewPager"
         android:layout_alignEnd="@id/introViewPager"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:background="@android:color/transparent"
         android:text="@string/btnSkip"
         android:textColor="@color/colorWhite"
-        android:textSize="15dp" />
+        android:textSize="14dp" />
 
 </RelativeLayout>

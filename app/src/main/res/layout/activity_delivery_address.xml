@@ -39,35 +39,29 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/deliveryAddressT"
-                android:textSize="25dp"
+                android:textSize="5dp"
                 android:textStyle="bold"
                 android:textColor="@color/colorPromoDe"
                 android:gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="5dp"/>
+                android:layout_marginTop="2dp" />
 
                 <EditText
                     android:id="@+id/editDelivery"
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
+                    android:layout_height="wrap_content"
                     android:ems="10"
-                    android:padding="15dp"
+                    android:padding="5dp"
                     android:background="@drawable/address_box"
-                    android:layout_marginTop="40dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:textSize="15dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:textSize="02dp"
                     android:inputType="textPostalAddress"
                     android:hint="@string/deliveryAddressHint"
                     android:textColorHint="@color/colorDeliveryBoxH"/>
-
-
-
             <Button
                 android:id="@+id/btnSliit"
                 android:layout_width="match_parent"
-                android:layout_height="110dp"
+                android:layout_height="15dp"
                 android:background="@drawable/btn_sliit"/>
             <View
                 android:layout_width="match_parent"
@@ -76,7 +70,7 @@
             <Button
                 android:id="@+id/btnIsuru"
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="10dp"
                 android:background="@drawable/btn_isurupura"/>
             <View
                 android:layout_width="match_parent"
@@ -85,21 +79,21 @@
             <Button
                 android:id="@+id/btnKatu"
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="10dp"
                 android:background="@drawable/btn_katugasthota"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_margin="5dp"
                 android:text="@string/deliveryAddressTime"
-                android:textSize="15dp"
+                android:textSize="5dp"
                 android:textStyle="bold"/>
 
             <Button
                 android:id="@+id/btnasap"
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="10dp"
                 android:background="@drawable/btn_asap"/>
             <View
                 android:layout_width="match_parent"
@@ -108,18 +102,19 @@
             <Button
                 android:id="@+id/btnschedule"
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="10dp"
                 android:background="@drawable/btn_schedule"/>
 
             <Button
                 android:id="@+id/btnsave"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:background="@drawable/round_btn"
                 android:text="@string/deliveryAddressSave"
+                android:textSize="2dp"
                 android:textColor="@color/colorWhite"
                 android:elevation="10dp"/>
 

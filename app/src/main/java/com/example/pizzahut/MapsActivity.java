@@ -3,7 +3,12 @@ package com.example.pizzahut;
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentActivity;
+import androidx.navigation.ui.AppBarConfiguration;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
@@ -13,8 +18,13 @@ import android.nfc.Tag;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.pizzahut.adapter.PizzaAdapter;
+import com.example.pizzahut.adapter.PizzaLocationAdpter;
+import com.example.pizzahut.model.PizzaModel;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -25,11 +35,17 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.navigation.NavigationView;
 
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
+
+    private List<String> movieList = new ArrayList<>();
+    private PizzaLocationAdpter mAdapter;
+
 
     private static final String TAG = "MAP ACTIVITY";
     private GoogleMap mMap;
@@ -124,12 +140,23 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_maps);
+
+
+        RecyclerView recyclerView = findViewById(R.id.recyclerView);
+        mAdapter = new PizzaLocationAdpter(movieList);
+        LinearLayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
+        mLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
+        recyclerView.setLayoutManager(mLayoutManager);
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        recyclerView.setAdapter(mAdapter);
+        prepareMovieData();
+
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
 
 
         arrayList.add(Kalutara);
@@ -141,6 +168,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         getLocationPermission();
 
     }
+
+
+    private void prepareMovieData() {
+        for(int i =0 ;i<=5;i++) {
+            movieList.add("ssssssssss");
+        }
+        mAdapter.notifyDataSetChanged();
+    }
+
 
     /**
      * Manipulates the map once available.
@@ -172,16 +208,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             mMap.addMarker(new MarkerOptions().position(Colombo).title("Welcome To Colombo Pizza Hut"));
 
 
-//            for(int i=0;i<arrayList.size();i++){
-//
-//
-//
-//                mMap.addMarker(new MarkerOptions().position(arrayList.get(i)).title(arrayList.get(i).toString()));
-//                mMap.animateCamera(CameraUpdateFactory.zoomTo(16.0f));
-//
-//                mMap.moveCamera(CameraUpdateFactory.newLatLng(arrayList.get(i)));
-//
-//            }
 
             getDeviceLocation();
 

@@ -35,7 +35,7 @@
         android:layout_marginLeft="50dp"
         android:layout_marginRight="30dp"
         android:text="@string/promoDes"
-        android:textSize="28dp"
+        android:textSize="30dp"
         android:textColor="@color/intro"
         android:fontFamily="@font/chremsel_serif_regular"/>
 </RelativeLayout>

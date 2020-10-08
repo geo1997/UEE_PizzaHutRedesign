@@ -14,6 +14,7 @@
 
 
     <com.google.android.material.button.MaterialButton
+        android:text="@string/navbar_home"
         android:id="@+id/bt_close"
         android:layout_width="100dp"
         android:layout_height="100dp"

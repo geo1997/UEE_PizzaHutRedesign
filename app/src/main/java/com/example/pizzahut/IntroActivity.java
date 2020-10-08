@@ -14,6 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.pizzahut.adapter.introSliderAdapter;
+import com.example.pizzahut.ui.FragmentHomePage;
 
 public class IntroActivity extends AppCompatActivity implements View.OnClickListener {
     SharedPreferences sharedPreferences;
@@ -58,17 +59,17 @@ public class IntroActivity extends AppCompatActivity implements View.OnClickList
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     firstTime = false;
 
-                    editor.putBoolean("firstTime", firstTime);
+                   editor.putBoolean("firstTime", firstTime);
                     editor.apply();
                           introSliderAdapter=new introSliderAdapter(this);
                           introPager.setAdapter(introSliderAdapter);
                           addDotsIndicator(0);
                           introPager.addOnPageChangeListener(viewListener);
 
-                }
-        else {
-           Intent homePage = new Intent(IntroActivity.this, homeActivity.class);
-            startActivity(homePage);
+               }
+       else {
+           Intent homePage = new Intent(IntroActivity.this, MainActivity.class);
+           startActivity(homePage);
             finish();
         }
 

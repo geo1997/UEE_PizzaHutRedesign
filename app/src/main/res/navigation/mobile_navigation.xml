@@ -3,7 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/nav_menu">
+
+    <fragment
+        android:id="@+id/nav_menu"
+        android:name="com.example.pizzahut.ui.FragmentHomePage"
+        android:label="fragment_home_page"
+        tools:layout="@layout/fragment_home_page" />
+
 
     <fragment
         android:id="@+id/nav_home"
@@ -11,15 +18,35 @@
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
-    <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.pizzahut.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.pizzahut.promosActivity"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_account"
+        android:name="com.example.pizzahut.ui.FragmentUserProfile"
+        android:label="fragment_uupp"
+        tools:layout="@layout/fragment_userprofile" />
+
+    <fragment
+        android:id="@+id/nav_promos"
+        android:name="com.example.pizzahut.ui.FragmentPromo"
+        android:label="fragment_promo"
+        tools:layout="@layout/fragment_promo" />
+
+    <fragment
+        android:id="@+id/nav_address"
+        android:name="com.example.pizzahut.ui.FragmentDeliveryAddress"
+        android:label="fragment_delivery_address"
+        tools:layout="@layout/fragment_delivery_address" />
+    <fragment
+        android:id="@+id/nav_contactus"
+        android:name="com.example.pizzahut.ui.FragmentFeedback"
+        android:label="fragment_feedback"
+        tools:layout="@layout/fragment_feedback" />
+
+    <fragment
+        android:id="@+id/nav_storelocator"
+        android:name="com.example.pizzahut.ui.MapFragment"
+        android:label="fragment_map"
+        tools:layout="@layout/fragment_map" />
+
+
 </navigation>
