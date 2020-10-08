@@ -3,6 +3,7 @@ package com.example.pizzahut;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -16,25 +17,23 @@ public class SignUp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-        firstName = findViewById(R.id.firstName);
-        lastName = findViewById(R.id.lastName);
+        firstName = findViewById(R.id.currentPhone);
+        lastName = findViewById(R.id.newPhone);
         inputEmail = findViewById(R.id.inputEmail);
         inputPhone = findViewById(R.id.inputPhone);
         inputPassword = findViewById(R.id.inputPassword);
         inputConfPassword = findViewById(R.id.inputConfPassword);
-
-        add();
     }
 
-    public void add(){
+    public void add(View view){
         if (!validateFirstName() || !validateLastName() || !validateEmail() || !validatePhoneNo() || !validatePassword()){
             return;
         }
-//        String fname = firstName.getText().toString();
-//        String lname = lastName.getText().toString();
-//        String email = inputEmail.getText().toString();
-//        String phone = inputPhone.getText().toString();
-//        String password = inputPassword.getText().toString();
+        String fname = firstName.getText().toString();
+        String lname = lastName.getText().toString();
+        String email = inputEmail.getText().toString();
+        String phone = inputPhone.getText().toString();
+        String password = inputPassword.getText().toString();
     }
 
     private Boolean validateFirstName() {

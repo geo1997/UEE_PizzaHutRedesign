@@ -7,7 +7,7 @@
     tools:context=".UserDetails">
 
     <TextView
-        android:id="@+id/feedbackForm"
+        android:id="@+id/resetPhone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="189dp"
@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/firstName"
+        android:id="@+id/currentPhone"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -38,10 +38,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/feedbackForm" />
+        app:layout_constraintTop_toBottomOf="@+id/resetPhone" />
 
     <EditText
-        android:id="@+id/lastName"
+        android:id="@+id/newPhone"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -56,7 +56,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/firstName" />
+        app:layout_constraintTop_toBottomOf="@+id/currentPhone" />
 
     <EditText
         android:id="@+id/inputEmail"
@@ -75,7 +75,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lastName" />
+        app:layout_constraintTop_toBottomOf="@+id/newPhone" />
 
     <EditText
         android:id="@+id/inputPhone"
@@ -97,7 +97,7 @@
         app:layout_constraintTop_toBottomOf="@+id/inputEmail" />
 
     <Button
-        android:id="@+id/btnRegister"
+        android:id="@+id/btnResetPhone"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"

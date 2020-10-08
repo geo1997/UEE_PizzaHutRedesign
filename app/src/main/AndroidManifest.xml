@@ -31,9 +31,8 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity android:name=".UserDetails"></activity>
-        <activity android:name=".Feedback"/>
-
+        <activity android:name=".UserDetails" />
+        <activity android:name=".Feedback" />
         <activity
             android:screenOrientation="portrait"
             android:name=".MapsActivity"
@@ -61,26 +60,22 @@
             android:screenOrientation="portrait"
             android:name=".Payment"
             android:label=""
-            android:theme="@style/AppTheme.NoActionBar" />
+            />
         <activity
             android:screenOrientation="portrait"
             android:name=".Checkout"
             android:label=""
-            android:theme="@style/AppTheme.NoActionBar" />
+             />
         <activity
             android:screenOrientation="portrait"
             android:name=".Cart"
             android:label=""
-            android:theme="@style/AppTheme.NoActionBar" />
+            />
         <activity
             android:screenOrientation="portrait"
             android:name=".FoodDetails"
             android:label="@string/title_activity_cart"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:screenOrientation="portrait"
-            android:name=".promosActivity"
-            android:exported="true" />
+            />
         <activity
             android:screenOrientation="portrait"
             android:name=".promoDetailActivity" />
