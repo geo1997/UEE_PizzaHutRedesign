@@ -42,11 +42,11 @@
         <activity
             android:screenOrientation="portrait"
             android:name=".DeliveryAddressActivity"
-            android:exported="true"></activity>
+            android:exported="true"/>
 
         <activity
             android:screenOrientation="portrait"
-            android:name=".forgotPassword"></activity>
+            android:name=".forgotPassword"/>
         <activity
             android:screenOrientation="portrait"
             android:name=".IntroActivity" />
@@ -79,10 +79,6 @@
         <activity
             android:screenOrientation="portrait"
             android:name=".promoDetailActivity" />
-        <activity
-            android:screenOrientation="portrait"
-            android:name=".homeActivity"
-            android:exported="true" />
         <activity
             android:screenOrientation="portrait"
             android:name=".MainActivity"

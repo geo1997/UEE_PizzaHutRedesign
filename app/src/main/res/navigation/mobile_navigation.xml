@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/nav_menu"
-        android:name="com.example.pizzahut.ui.FragmentHomePage"
+        android:name="com.example.pizzahut.ui.firstpage.FragmentHomePage"
         android:label="fragment_home_page"
         tools:layout="@layout/fragment_home_page" />
 
@@ -47,6 +47,5 @@
         android:name="com.example.pizzahut.ui.MapFragment"
         android:label="fragment_map"
         tools:layout="@layout/fragment_map" />
-
 
 </navigation>

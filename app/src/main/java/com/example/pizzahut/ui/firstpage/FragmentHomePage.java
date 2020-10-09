@@ -1,50 +1,49 @@
-package com.example.pizzahut;
+package com.example.pizzahut.ui.firstpage;
 
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.Toast;
-import android.widget.ViewFlipper;
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.models.SlideModel;
+import com.example.pizzahut.R;
 import com.example.pizzahut.adapter.Promo;
 import com.example.pizzahut.model.PromoItem;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class homeActivity extends AppCompatActivity {
+
+public class FragmentHomePage extends Fragment {
+
     RecyclerView recyclerView;
     ArrayList<PromoItem> promoList;
+    Button btnMenu;
     ImageSlider promFlip;
     private static final String TAG="promoActivity";
     private long backPressedTime;
 
-    @Override
-    public void onBackPressed() {
-        if(backPressedTime+2000>System.currentTimeMillis()){
-            super.onBackPressed();
-        }else{
-            Toast.makeText(this,"Press back Again to exit",Toast.LENGTH_SHORT).show();
-        }
-        backPressedTime=System.currentTimeMillis();
-    }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+    public View onCreateView(@NonNull LayoutInflater inflater,
+                             ViewGroup container, Bundle savedInstanceState) {
 
-        promFlip=findViewById(R.id.promFlip);
+        View root = inflater.inflate(R.layout.fragment_home_page, container, false);
+
+
+
+        promFlip=root.findViewById(R.id.promFlip);
 
         List<SlideModel> newPromos=new ArrayList<>();
         newPromos.add(new SlideModel(R.drawable.new_offer4));
@@ -55,7 +54,7 @@ public class homeActivity extends AppCompatActivity {
         promFlip.setImageList(newPromos,true);
 
 
-        recyclerView=findViewById(R.id.promDeals);
+        recyclerView=root.findViewById(R.id.promDeals);
         promoList=new ArrayList<>();
 
         promoList.add(new PromoItem(1,R.drawable.most_pop_deal1,
@@ -74,11 +73,24 @@ public class homeActivity extends AppCompatActivity {
                 "This offer mostly suitable for couples who like to have a best offer from the pizza hut. It's contains Large pan pizza with appetizers and 2 coke.You can choose the type of pizzas given option below"));
 
 
-        LinearLayoutManager layoutManager=new LinearLayoutManager(this);
+        LinearLayoutManager layoutManager=new LinearLayoutManager(getContext());
         RecyclerView.LayoutManager rLayoutManager=layoutManager;
         recyclerView.setLayoutManager(rLayoutManager);
-        Promo adapter=new Promo(this,promoList);
+        Promo adapter=new Promo(getContext(),promoList);
         recyclerView.setAdapter(adapter);
+
+        setHasOptionsMenu(true);
+
+        return root;
     }
 
+
+
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+
+        if (menu != null) {
+            menu.findItem(R.id.main_logout_icon).setVisible(true);
+            menu.findItem(R.id.main_cart_icon).setVisible(false);
+        }
+    }
 }

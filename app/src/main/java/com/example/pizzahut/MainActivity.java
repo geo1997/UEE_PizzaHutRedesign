@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         // menu should be considered as top level destinations.
-        mAppBarConfiguration = new AppBarConfiguration.Builder(
+        mAppBarConfiguration = new AppBarConfiguration.Builder(R.id.nav_menu,
                 R.id.nav_home,R.id.nav_account,R.id.nav_promos,R.id.nav_address)
                 .setDrawerLayout(drawer)
                 .build();
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         //Navigation Drawer
         navigationView.bringToFront();
         //navigationView.setNavigationItemSelectedListener(this);
-        navigationView.setCheckedItem(R.id.nav_home);
+        navigationView.setCheckedItem(R.id.nav_menu);
 
         animateNavigationDrawer();
 
