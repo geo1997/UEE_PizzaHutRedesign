@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/design_default_color_background"
+    android:background="@color/colorBackground"
     tools:context=".FoodDetails">
 
     <androidx.appcompat.widget.Toolbar
@@ -13,16 +13,36 @@
         android:layout_height="?attr/actionBarSize"
         android:background="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:popupTheme="@style/AppTheme.PopupOverlay"
         app:titleTextColor="#000000">
 
         <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="10dp"
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:adjustViewBounds="true"
             app:srcCompat="@drawable/pizzahut" />
+
+        <ImageView
+            android:id="@+id/cartBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="right"
+            android:layout_marginStart="73dp"
+            android:layout_marginEnd="6dp"
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/ic_baseline_shopping_cart_24" />
 
     </androidx.appcompat.widget.Toolbar>
 
@@ -44,7 +64,7 @@
                 android:id="@+id/imageView8"
                 android:layout_width="0dp"
                 android:layout_height="159dp"
-                android:src="@drawable/bbq_chicken"
+                android:src="@drawable/pizzai"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -80,7 +100,7 @@
                 android:layout_marginTop="16dp"
                 android:fontFamily="@font/semibold"
                 android:text="Select Size"
-                android:textColor="#091020"
+                android:textColor="@color/colorWhite"
                 android:textSize="15sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView5" />
@@ -93,7 +113,7 @@
                 android:layout_marginTop="16dp"
                 android:fontFamily="@font/semibold"
                 android:text="Add-ons"
-                android:textColor="#091020"
+                android:textColor="@color/colorWhite"
                 android:textSize="15sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
@@ -106,7 +126,7 @@
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/semibold"
                 android:text="BBQ Chicken Pizza"
-                android:textColor="#091020"
+                android:textColor="@color/colorWhite"
                 android:textSize="19sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView10" />
@@ -160,7 +180,7 @@
                 android:layout_marginTop="12dp"
                 android:fontFamily="@font/semibold"
                 android:text="Half and Half"
-                android:textColor="#091020"
+                android:textColor="@color/colorWhite"
                 android:textSize="10sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/switch2"
@@ -173,7 +193,7 @@
                 android:layout_marginStart="16dp"
                 android:fontFamily="@font/semibold"
                 android:text="Mayo Base"
-                android:textColor="#091020"
+                android:textColor="@color/colorWhite"
                 android:textSize="10sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView3"
@@ -186,7 +206,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:text="This pizza is made with chicken, barbecue sauce, mozzarella and colby jack cheese, and red onion."
-                android:textColor="#000000"
+                android:textColor="@color/colorWhite"
                 android:textSize="10sp"
                 app:layout_constraintEnd_toStartOf="@+id/imageView9"
                 app:layout_constraintStart_toStartOf="parent"
@@ -212,7 +232,7 @@
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/semibold"
         android:text="01"
-        android:textColor="#272670"
+        android:textColor="@color/colorWhite"
         android:textSize="19sp"
         app:layout_constraintBottom_toTopOf="@+id/cart_btn"
         app:layout_constraintEnd_toStartOf="@+id/imageView11"
@@ -226,7 +246,7 @@
         android:layout_marginEnd="16dp"
         android:fontFamily="@font/semibold"
         android:text="Rs. 1560/="
-        android:textColor="#272670"
+        android:textColor="@color/colorWhite"
         android:textSize="19sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView11"
         app:layout_constraintEnd_toEndOf="parent"

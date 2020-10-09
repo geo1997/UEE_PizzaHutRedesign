@@ -3,11 +3,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorBackground"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/resetPhone"
+        android:id="@+id/resetEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="189dp"
@@ -23,26 +24,27 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/currentPhone"
+        android:id="@+id/currentEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/round_border"
         android:drawablePadding="16dp"
         android:ems="10"
-        android:enabled="false"
         android:inputType="text"
         android:padding="16dp"
-        android:text="Current Email"
+        android:hint="Current Email"
+        android:textColorHint="@color/colorWhite"
+        android:textColor="@color/colorWhite"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resetPhone" />
+        app:layout_constraintTop_toBottomOf="@+id/resetEmail" />
 
     <EditText
-        android:id="@+id/newPhone"
+        android:id="@+id/newEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -51,17 +53,18 @@
         android:background="@drawable/round_border"
         android:drawablePadding="16dp"
         android:ems="10"
-        android:enabled="false"
         android:inputType="text"
         android:padding="16dp"
-        android:text="New Email"
+        android:hint="New Email"
+        android:textColorHint="@color/colorWhite"
+        android:textColor="@color/colorWhite"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/currentPhone" />
+        app:layout_constraintTop_toBottomOf="@+id/currentEmail" />
 
     <EditText
-        android:id="@+id/confirmPhone"
+        android:id="@+id/confirmEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -70,29 +73,31 @@
         android:background="@drawable/round_border"
         android:drawablePadding="16dp"
         android:ems="10"
-        android:enabled="false"
         android:inputType="text"
         android:padding="16dp"
-        android:text="Confirm Email"
+        android:hint="Confirm Email"
+        android:textColorHint="@color/colorWhite"
+        android:textColor="@color/colorWhite"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newPhone" />
+        app:layout_constraintTop_toBottomOf="@+id/newEmail" />
 
     <Button
-        android:id="@+id/btnResetPhone"
+        android:id="@+id/btnResetEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/round_btn"
         android:text="@string/submit"
+        android:onClick="add"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirmPhone" />
+        app:layout_constraintTop_toBottomOf="@+id/confirmEmail" />
 </androidx.constraintlayout.widget.ConstraintLayout>

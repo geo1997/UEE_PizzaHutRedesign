@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBackground"
     tools:context=".Login">
 
     <View
@@ -45,6 +46,8 @@
         android:drawableStart="@drawable/ic_email"
         android:drawablePadding="16dp"
         android:ems="10"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorWhite"
         android:hint="@string/emailPhone"
         android:inputType="textEmailAddress"
         android:padding="16dp"
@@ -60,6 +63,8 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorWhite"
         android:background="@drawable/round_border"
         android:drawableStart="@drawable/ic_lock"
         android:drawablePadding="16dp"
@@ -112,10 +117,10 @@
         android:layout_marginEnd="32dp"
         android:background="@drawable/round_btn"
         android:text="@string/login"
+        android:onClick="add"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:onClick="add"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"

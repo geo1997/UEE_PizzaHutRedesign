@@ -17,8 +17,8 @@ public class SignUp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-        firstName = findViewById(R.id.currentPhone);
-        lastName = findViewById(R.id.newPhone);
+        firstName = findViewById(R.id.firstName);
+        lastName = findViewById(R.id.lastName);
         inputEmail = findViewById(R.id.inputEmail);
         inputPhone = findViewById(R.id.inputPhone);
         inputPassword = findViewById(R.id.inputPassword);
@@ -26,7 +26,7 @@ public class SignUp extends AppCompatActivity {
     }
 
     public void add(View view){
-        if (!validateFirstName() || !validateLastName() || !validateEmail() || !validatePhoneNo() || !validatePassword()){
+        if (!validateFirstName() || !validateLastName() || !validateEmail() || !validatePhoneNo() || !validatePassword() || !validateConfirmPassword()){
             return;
         }
         String fname = firstName.getText().toString();
@@ -34,6 +34,7 @@ public class SignUp extends AppCompatActivity {
         String email = inputEmail.getText().toString();
         String phone = inputPhone.getText().toString();
         String password = inputPassword.getText().toString();
+        String confirmpassword = inputConfPassword.getText().toString();
     }
 
     private Boolean validateFirstName() {
@@ -106,6 +107,21 @@ public class SignUp extends AppCompatActivity {
             return false;
         } else if (!val.matches(passwordVal)) {
             inputPassword.setError("Password is too weak");
+            return false;
+        } else {
+            inputPassword.setError(null);
+            return true;
+        }
+    }
+
+    private Boolean validateConfirmPassword() {
+        String val = inputConfPassword.getText().toString();
+
+        if (val.isEmpty()) {
+            inputConfPassword.setError("Field cannot be empty");
+            return false;
+        } else if (!inputPassword.getText().toString().equals(inputConfPassword.getText().toString())) {
+            inputConfPassword.setError("Password does not match");
             return false;
         } else {
             inputPassword.setError(null);

@@ -51,7 +51,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/currentPhone"
+        android:id="@+id/currentPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -69,7 +69,7 @@
         app:layout_constraintTop_toBottomOf="@+id/resetPhone" />
 
     <EditText
-        android:id="@+id/newPhone"
+        android:id="@+id/newPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -125,7 +125,7 @@
         app:layout_constraintTop_toBottomOf="@+id/inputEmail" />
 
     <Button
-        android:id="@+id/btnResetPhone"
+        android:id="@+id/btnResetEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"

@@ -18,6 +18,7 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import com.example.pizzahut.ui.FragmentFeedback;
 import com.google.android.material.navigation.NavigationView;
 
 
@@ -141,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
         Fragment fragment = null;
         if (id==R.id.main_cart_icon){
-            Intent intent = new Intent(this,Cart.class);
+            Intent intent = new Intent(this, Cart.class);
             startActivity(intent);
             return true;
         }

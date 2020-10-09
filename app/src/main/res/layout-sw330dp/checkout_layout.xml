@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:elevation="3dp"
+    android:background="@color/colorBackground"
     android:orientation="vertical">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -17,16 +18,36 @@
             android:layout_height="?attr/actionBarSize"
             android:background="@color/colorPrimary"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:popupTheme="@style/AppTheme.PopupOverlay"
             app:titleTextColor="#000000">
 
             <ImageView
+                android:id="@+id/backBtn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="10dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+            <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:adjustViewBounds="true"
                 app:srcCompat="@drawable/pizzahut" />
+
+            <ImageView
+                android:id="@+id/cartBtn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="right"
+                android:layout_marginStart="73dp"
+                android:layout_marginEnd="6dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/ic_baseline_shopping_cart_24" />
 
         </androidx.appcompat.widget.Toolbar>
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -62,7 +83,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="16dp"
                 android:text="+94 764 702 925"
-                android:textColor="#000000"
+                android:textColor="@color/colorWhite"
                 android:textSize="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -74,6 +95,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
+                android:textColor="@color/colorWhite"
+                android:drawableTint="@color/colorWhite"
                 android:drawableStart="@drawable/ic_baseline_account_circle_24"
                 android:text=" John Doe"
                 android:textSize="24dp"
@@ -103,7 +126,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:text="Home : "
-                android:textColor="#000000"
+                android:textColor="@color/colorWhite"
                 android:textSize="20dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView16" />
@@ -116,7 +139,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="16dp"
                 android:text="No.15, Kandy Road, Malabe"
-                android:textColor="#000000"
+                android:textColor="@color/colorWhite"
                 android:textSize="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -140,6 +163,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
+                android:textColor="@color/colorWhite"
+                android:drawableTint="@color/colorWhite"
                 android:drawableStart="@drawable/ic_baseline_location_on_24"
                 android:text="Delivery Address"
                 android:textSize="24dp"
@@ -170,7 +195,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
                 android:text="3rd October 2020 12:45pm"
-                android:textColor="#000000"
+                android:textColor="@color/colorWhite"
                 android:textSize="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -182,6 +207,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
+                android:textColor="@color/colorWhite"
+                android:drawableTint="@color/colorWhite"
                 android:drawableStart="@drawable/ic_baseline_timer_24"
                 android:text=" Estimated Delivery Time"
                 android:textSize="24dp"
@@ -203,7 +230,7 @@
                 android:layout_marginBottom="32dp"
                 android:drawableStart="@drawable/visa_48px"
                 android:text="**** **** **** 5643"
-                android:textColor="#000000"
+                android:textColor="@color/colorWhite"
                 android:textSize="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -227,6 +254,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="32dp"
+                android:textColor="@color/colorWhite"
+                android:drawableTint="@color/colorWhite"
                 android:drawableStart="@drawable/ic_baseline_payment_24"
                 android:text=" Payment Method"
                 android:textSize="24dp"
@@ -267,6 +296,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
+                android:textColor="@color/colorWhite"
+                android:drawableTint="@color/colorWhite"
                 android:drawableStart="@drawable/ic_baseline_add_box_24"
                 android:text=" Price Details"
                 android:textSize="24dp"
@@ -290,9 +321,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:textSize="20dp"
                 android:text="Price (2 items)"
-                android:textColor="#000000"
+                android:textColor="@color/colorWhite"
+                android:textSize="20dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/divider" />
 
@@ -303,8 +334,8 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:text="Rs.1200"
+                android:textColor="@color/colorWhite"
                 android:textSize="20dp"
-                android:textColor="#000000"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/divider" />
 
@@ -336,7 +367,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:text="Total Amount"
-                android:textColor="#000000"
+                android:textColor="@color/colorWhite"
                 android:textSize="20dp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -350,7 +381,7 @@
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="8dp"
                 android:text="Rs 2760"
-                android:textColor="#000000"
+                android:textColor="@color/colorWhite"
                 android:textSize="20dp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -363,9 +394,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
-                android:textSize="20dp"
                 android:text="Delivery"
-                android:textColor="#000000"
+                android:textColor="@color/colorWhite"
+                android:textSize="20dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/total_items" />
         </androidx.constraintlayout.widget.ConstraintLayout>
