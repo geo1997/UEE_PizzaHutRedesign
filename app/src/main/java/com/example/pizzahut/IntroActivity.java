@@ -6,7 +6,6 @@ import androidx.viewpager.widget.ViewPager;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.os.Handler;
 import android.text.Html;
 import android.view.View;
 import android.widget.Button;
@@ -14,7 +13,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.pizzahut.adapter.introSliderAdapter;
-import com.example.pizzahut.ui.FragmentHomePage;
 
 public class IntroActivity extends AppCompatActivity implements View.OnClickListener {
     SharedPreferences sharedPreferences;
@@ -46,9 +44,7 @@ public class IntroActivity extends AppCompatActivity implements View.OnClickList
         skipBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent homePage = new Intent(IntroActivity.this, homeActivity.class);
-                startActivity(homePage);
-                finish();
+               changeSpals();
             }
         });
 
@@ -75,6 +71,12 @@ public class IntroActivity extends AppCompatActivity implements View.OnClickList
 
     }
 
+
+    public void changeSpals(){
+        Intent homePage = new Intent(this, MainActivity.class);
+        startActivity(homePage);
+        finish();
+    }
     public void addDotsIndicator(int position){
         dots=new TextView[4];
         dotLayout.removeAllViews();

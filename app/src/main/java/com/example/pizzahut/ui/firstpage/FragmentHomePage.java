@@ -1,4 +1,4 @@
-package com.example.pizzahut.ui;
+package com.example.pizzahut.ui.firstpage;
 
 import android.os.Bundle;
 
@@ -38,10 +38,7 @@ public class FragmentHomePage extends Fragment {
 
         View root = inflater.inflate(R.layout.fragment_home_page, container, false);
 
-        btnMenu=root.findViewById(R.id.btnMenu);
 
-
-        //btnMenu.setOnClickListener((View.OnClickListener) getActivity());
 
         promFlip=root.findViewById(R.id.promFlip);
 
@@ -85,17 +82,6 @@ public class FragmentHomePage extends Fragment {
 
 
     }
-
-//
-//    @Override
-//    public void onBackPressed() {
-//        if(backPressedTime+2000>System.currentTimeMillis()){
-//            super.onBackPressed();
-//        }else{
-//            Toast.makeText(this,"Press back Again to exit",Toast.LENGTH_SHORT).show();
-//        }
-//        backPressedTime=System.currentTimeMillis();
-//    }
 
 
 
