@@ -8,6 +8,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -76,13 +79,18 @@ public class FragmentHomePage extends Fragment {
         Promo adapter=new Promo(getContext(),promoList);
         recyclerView.setAdapter(adapter);
 
+        setHasOptionsMenu(true);
+
         return root;
-
-
-
-
     }
 
 
 
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+
+        if (menu != null) {
+            menu.findItem(R.id.main_logout_icon).setVisible(true);
+            menu.findItem(R.id.main_cart_icon).setVisible(false);
+        }
+    }
 }
