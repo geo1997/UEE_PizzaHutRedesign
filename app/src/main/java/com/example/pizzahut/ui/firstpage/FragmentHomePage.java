@@ -1,4 +1,4 @@
-package com.example.pizzahut.ui;
+package com.example.pizzahut.ui.firstpage;
 
 import android.os.Bundle;
 
@@ -8,6 +8,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -38,10 +41,7 @@ public class FragmentHomePage extends Fragment {
 
         View root = inflater.inflate(R.layout.fragment_home_page, container, false);
 
-        btnMenu=root.findViewById(R.id.btnMenu);
 
-
-        btnMenu.setOnClickListener((View.OnClickListener) getActivity());
 
         promFlip=root.findViewById(R.id.promFlip);
 
@@ -79,24 +79,18 @@ public class FragmentHomePage extends Fragment {
         Promo adapter=new Promo(getContext(),promoList);
         recyclerView.setAdapter(adapter);
 
+        setHasOptionsMenu(true);
+
         return root;
-
-
-
-
     }
 
-//
-//    @Override
-//    public void onBackPressed() {
-//        if(backPressedTime+2000>System.currentTimeMillis()){
-//            super.onBackPressed();
-//        }else{
-//            Toast.makeText(this,"Press back Again to exit",Toast.LENGTH_SHORT).show();
-//        }
-//        backPressedTime=System.currentTimeMillis();
-//    }
 
 
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
 
+        if (menu != null) {
+            menu.findItem(R.id.main_logout_icon).setVisible(true);
+            menu.findItem(R.id.main_cart_icon).setVisible(false);
+        }
+    }
 }

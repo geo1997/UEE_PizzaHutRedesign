@@ -9,6 +9,15 @@
         android:iconTint="#000000"
         android:icon="@drawable/ic_baseline_shopping_cart_24"
         app:showAsAction="always" />
+
+    <item
+        android:visible="false"
+        android:id="@+id/main_logout_icon"
+        android:orderInCategory="100"
+        android:title="logout"
+        android:iconTint="#000000"
+        android:icon="@drawable/ic_logout"
+        app:showAsAction="always" />
 </menu>
 
 

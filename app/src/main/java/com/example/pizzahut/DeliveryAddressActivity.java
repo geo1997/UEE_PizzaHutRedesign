@@ -35,7 +35,7 @@ public class DeliveryAddressActivity extends AppCompatActivity implements View.O
             btnAsap.setBackgroundResource(R.drawable.btn_asap_select);
         }else if(view.getId()==R.id.btnsave){
             Toast.makeText(this,"Delivery Details Saved!", Toast.LENGTH_SHORT).show();
-            Intent menePage=new Intent(this,homeActivity.class);
+            Intent menePage=new Intent(this,MainActivity.class);
             startActivity(menePage);
             finish();
         }

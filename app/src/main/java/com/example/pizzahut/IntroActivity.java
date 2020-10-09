@@ -6,7 +6,6 @@ import androidx.viewpager.widget.ViewPager;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.os.Handler;
 import android.text.Html;
 import android.view.View;
 import android.widget.Button;
@@ -45,9 +44,7 @@ public class IntroActivity extends AppCompatActivity implements View.OnClickList
         skipBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent homePage = new Intent(IntroActivity.this, homeActivity.class);
-                startActivity(homePage);
-                finish();
+               changeSpals();
             }
         });
 
@@ -67,13 +64,19 @@ public class IntroActivity extends AppCompatActivity implements View.OnClickList
 
                }
        else {
-           Intent homePage = new Intent(IntroActivity.this, homeActivity.class);
+           Intent homePage = new Intent(IntroActivity.this, MainActivity.class);
            startActivity(homePage);
             finish();
         }
 
     }
 
+
+    public void changeSpals(){
+        Intent homePage = new Intent(this, MainActivity.class);
+        startActivity(homePage);
+        finish();
+    }
     public void addDotsIndicator(int position){
         dots=new TextView[4];
         dotLayout.removeAllViews();

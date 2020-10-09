@@ -12,8 +12,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.pizzahut.MainActivity;
 import com.example.pizzahut.R;
-import com.example.pizzahut.homeActivity;
 
 
 public class FragmentDeliveryAddress extends Fragment implements View.OnClickListener {
@@ -49,7 +49,7 @@ public class FragmentDeliveryAddress extends Fragment implements View.OnClickLis
             btnAsap.setBackgroundResource(R.drawable.btn_asap_select);
         }else if(view.getId()==R.id.btnsave){
             Toast.makeText(getActivity(),"Delivery Details Saved!", Toast.LENGTH_SHORT).show();
-            Intent menePage=new Intent(getActivity(), homeActivity.class);
+            Intent menePage=new Intent(getActivity(), MainActivity.class);
             startActivity(menePage);
 
         }
