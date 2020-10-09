@@ -106,7 +106,7 @@
                 android:layout_marginTop="60dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/round_btn"
+                android:background="@color/colorBtn"
                 android:text="@string/deliveryAddressSave"
                 android:textSize="25dp"
                 android:textColor="@color/colorWhite"
