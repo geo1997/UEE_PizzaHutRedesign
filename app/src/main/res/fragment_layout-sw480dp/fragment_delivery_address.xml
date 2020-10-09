@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/intro_screen"
+    tools:context=".ui.FragmentDeliveryAddress">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:alpha="0.8"
+            android:background="@color/colorWhite">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/deliveryAddressT"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPromoDe"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"/>
+
+            <EditText
+                android:id="@+id/editDelivery"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:padding="15dp"
+                android:background="@drawable/address_box"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:textSize="10dp"
+                android:inputType="textPostalAddress"
+                android:hint="@string/deliveryAddressHint"
+                android:textColorHint="@color/colorDeliveryBoxH"/>
+
+
+
+            <Button
+                android:id="@+id/btnSliit"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/btn_sliit"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorBlack"/>
+            <Button
+                android:id="@+id/btnIsuru"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/btn_isurupura"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorBlack"/>
+            <Button
+                android:id="@+id/btnKatu"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/btn_katugasthota"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/deliveryAddressTime"
+                android:textSize="15dp"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/btnasap"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/btn_asap"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorBlack"/>
+            <Button
+                android:id="@+id/btnschedule"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/btn_schedule"/>
+
+            <Button
+                android:id="@+id/btnsave"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/round_btn"
+                android:text="@string/deliveryAddressSave"
+                android:textColor="@color/colorWhite"
+                android:textSize="10dp"
+                android:elevation="10dp"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

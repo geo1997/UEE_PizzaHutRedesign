@@ -22,10 +22,9 @@ import com.example.pizzahut.model.PromoItem;
 import java.util.ArrayList;
 import java.util.List;
 
-public class homeActivity extends AppCompatActivity implements View.OnClickListener{
+public class homeActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     ArrayList<PromoItem> promoList;
-    Button btnMenu;
     ImageSlider promFlip;
     private static final String TAG="promoActivity";
     private long backPressedTime;
@@ -44,11 +43,6 @@ public class homeActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
-        btnMenu=findViewById(R.id.btnMenu);
-
-
-        btnMenu.setOnClickListener(this);
 
         promFlip=findViewById(R.id.promFlip);
 
@@ -87,11 +81,4 @@ public class homeActivity extends AppCompatActivity implements View.OnClickListe
         recyclerView.setAdapter(adapter);
     }
 
-    @Override
-    public void onClick(View view) {
-        if(view.getId()==R.id.btnMenu){
-           Intent menu=new Intent(this,MainActivity.class);
-           startActivity(menu);
-        }
-    }
 }

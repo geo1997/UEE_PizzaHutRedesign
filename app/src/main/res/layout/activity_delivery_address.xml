@@ -4,26 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/intro_screen"
+    android:background="@color/colorBackground"
     tools:context=".DeliveryAddressActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
-
-    </com.google.android.material.appbar.AppBarLayout>
     <RelativeLayout
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             android:layout_marginTop="60dp">
+             android:layout_marginTop="10dp">
 
         <LinearLayout
                 android:layout_width="match_parent"
@@ -33,7 +20,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:alpha="0.8"
-                android:background="@color/colorWhite">
+                android:background="@color/colorPromoDe">
 
             <TextView
                 android:layout_width="match_parent"
@@ -41,7 +28,7 @@
                 android:text="@string/deliveryAddressT"
                 android:textSize="5dp"
                 android:textStyle="bold"
-                android:textColor="@color/colorPromoDe"
+                android:textColor="@color/colorWhite"
                 android:gravity="center"
                 android:layout_marginTop="2dp" />
 
@@ -87,6 +74,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:text="@string/deliveryAddressTime"
+                android:textColor="@color/colorWhite"
                 android:textSize="5dp"
                 android:textStyle="bold"/>
 
@@ -114,7 +102,7 @@
                 android:layout_marginRight="10dp"
                 android:background="@drawable/round_btn"
                 android:text="@string/deliveryAddressSave"
-                android:textSize="2dp"
+                android:textSize="10dp"
                 android:textColor="@color/colorWhite"
                 android:elevation="10dp"/>
 

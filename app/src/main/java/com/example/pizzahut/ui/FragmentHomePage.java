@@ -38,7 +38,7 @@ public class FragmentHomePage extends Fragment {
 
         View root = inflater.inflate(R.layout.fragment_home_page, container, false);
 
-        btnMenu=root.findViewById(R.id.btnMenu);
+        //btnMenu=root.findViewById(R.id.btnMenu);
 
 
         //btnMenu.setOnClickListener((View.OnClickListener) getActivity());

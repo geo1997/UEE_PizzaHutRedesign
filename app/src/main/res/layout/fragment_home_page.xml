@@ -11,13 +11,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/upper"
-        android:layout_marginTop="55dp">
+       >
 
         <com.denzcoskun.imageslider.ImageSlider
             android:id="@+id/promFlip"
             app:auto_cycle="true"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="280dp"
             app:delay="0"
             app:period="1000">
 
@@ -26,25 +26,16 @@
 
     </RelativeLayout>
 
-    <Button
-        android:id="@+id/btnMenu"
-        android:layout_width="200dp"
-        android:layout_height="70dp"
-        android:background="@drawable/menu_btn"
-        android:layout_below="@id/upper"
-        android:clickable="true"
-        android:elevation="10dp"
-        android:textAlignment="viewStart"/>
-
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="280dp">
+        android:layout_marginTop="360dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
             android:id="@+id/promDeals">
 
         </androidx.recyclerview.widget.RecyclerView>
