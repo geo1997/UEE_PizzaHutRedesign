@@ -145,6 +145,10 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(this, Cart.class);
             startActivity(intent);
             return true;
+        }else if(id==R.id.main_logout_icon){
+            Intent intent = new Intent(this,Login.class);
+            startActivity(intent);
+            return true;
         }
 
         return super.onOptionsItemSelected(item);
