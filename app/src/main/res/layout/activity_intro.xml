@@ -10,17 +10,25 @@
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/introViewPager"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:layout_margin="5dp">
+        android:layout_height="662dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp">
 
     </androidx.viewpager.widget.ViewPager>
 
     <LinearLayout
+        android:layout_alignParentBottom="true"
         android:id="@+id/dotLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:layout_below="@id/introViewPager"
+
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="-100dp"
+
+
         android:layout_centerHorizontal="true"
         android:padding="20dp"
         android:orientation="horizontal">
@@ -28,11 +36,12 @@
     </LinearLayout>
 
     <Button
+        android:layout_alignParentBottom="true"
         android:layout_margin="5dp"
         android:id="@+id/introButton"
         android:layout_width="wrap_content"
         android:layout_height="80dp"
-        android:layout_below="@id/introViewPager"
+
         android:layout_alignEnd="@id/introViewPager"
         android:layout_marginTop="5dp"
         android:background="@android:color/transparent"
