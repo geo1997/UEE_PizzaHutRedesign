@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -40,6 +41,11 @@ public class FragmentEmail extends Fragment {
     public void add(View view){
         if (!validateCurrentEmail() || !validateNewEmail() || !validateConfirmEmail()){
             return;
+        }else {
+            currentEmail.setText("");
+            newEmail.setText("");
+            confirmEmail.setText("");
+            Toast.makeText(getActivity(),"Email Changed", Toast.LENGTH_LONG).show();
         }
         String currentEmails = currentEmail.getText().toString();
         String newEmails = newEmail.getText().toString();

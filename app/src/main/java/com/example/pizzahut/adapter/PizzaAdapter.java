@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.pizzahut.FoodDetails;
 import com.example.pizzahut.R;
 import com.example.pizzahut.model.PizzaModel;
 
@@ -95,6 +96,9 @@ public class PizzaAdapter extends ArrayAdapter<PizzaModel> implements View.OnCli
 
 
     private void singleApplyClick(){
+        Intent intent = new Intent(getContext(), FoodDetails.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        getContext().startActivity(intent);
 
     }
 }

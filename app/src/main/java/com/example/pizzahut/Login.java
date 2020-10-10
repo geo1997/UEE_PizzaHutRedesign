@@ -12,6 +12,7 @@ import android.widget.EditText;
 
 import com.example.pizzahut.ui.firstpage.FragmentHomePage;
 import android.app.Fragment;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.pizzahut.ui.home.HomeFragment;
@@ -22,6 +23,8 @@ public class Login extends AppCompatActivity {
 
     EditText inputPassword,inputEmail;
   Button buttonLogin;
+  TextView register;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,12 +33,20 @@ public class Login extends AppCompatActivity {
         inputPassword = findViewById(R.id.inputPassword);
         inputEmail = findViewById(R.id.inputEmail);
         buttonLogin = findViewById(R.id.btnLogin);
+        register = findViewById(R.id.newUser);
 
 
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 loginUser();
+            }
+        });
+
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Login.this, SignUp.class));
             }
         });
     }

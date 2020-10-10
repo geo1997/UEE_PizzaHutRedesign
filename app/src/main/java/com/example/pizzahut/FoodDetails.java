@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -23,6 +24,14 @@ public class FoodDetails extends AppCompatActivity {
             public void onClick(View view) {
                 startActivity(new Intent(FoodDetails.this, MainActivity.class));
                 Toast.makeText(FoodDetails.this, "Item added to cart", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        ImageView btncart = (ImageView) findViewById(R.id.cartBtn);
+        btncart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(FoodDetails.this, Cart.class));
             }
         });
     }
