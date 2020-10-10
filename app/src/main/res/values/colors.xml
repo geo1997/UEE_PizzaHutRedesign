@@ -18,10 +18,10 @@
     <color name="colorRecycler">#F15656</color>
     <color name="colorOptionPane">#663300</color>
 
-    <color name="colorOptionPaneDe">#F7AD4A</color>
+    <color name="colorOptionPaneDe">#1F387D</color>
 
     <color name="colorBtn">#660000</color>
-    <color name="colorPromoDe">#29293d</color>
+    <color name="colorPromoDe">#222224</color>
     <color name="colorPromoDeStart">#CE2A2A</color>
     <color name="colorPromoDeEnd"> #D5481D</color>
     <color name="colorPromoDeBackground">#2E2E2E</color>

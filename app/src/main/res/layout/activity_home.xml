@@ -6,19 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".homeActivity"
     android:background="@drawable/home_page">
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
-
-    </com.google.android.material.appbar.AppBarLayout>
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -39,15 +26,7 @@
 
     </RelativeLayout>
 
-    <Button
-        android:id="@+id/btnMenu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="07dp"
-        android:background="@drawable/menu_btn"
-        android:layout_below="@id/upper"
-        android:clickable="true"
-        android:elevation="10dp"/>
+
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
