@@ -1,41 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.FragmentUserProfile"
-    android:background="#ffffff"
-    android:clickable="true"
-
-    >
-
-
-<!--   <com.google.android.material.appbar.AppBarLayout-->
-<!--       android:layout_width="match_parent"-->
-<!--       android:layout_height="wrap_content"-->
-<!--       android:theme="@style/AppTheme.AppBarOverlay">-->
-
-<!--      <androidx.appcompat.widget.Toolbar-->
-<!--          android:id="@+id/toolbar"-->
-<!--          android:layout_width="match_parent"-->
-<!--          android:layout_height="?attr/actionBarSize"-->
-<!--          android:background="@color/colorPrimary"-->
-<!--          app:titleTextColor="#000000"-->
-<!--          app:popupTheme="@style/AppTheme.PopupOverlay">-->
-
-<!--         <ImageView-->
-<!--             android:layout_width="wrap_content"-->
-<!--             android:layout_height="40dp"-->
-<!--             android:adjustViewBounds="true"-->
-<!--             app:srcCompat="@drawable/pizzahut" />-->
-
-<!--      </androidx.appcompat.widget.Toolbar>-->
-
-<!--   </com.google.android.material.appbar.AppBarLayout>-->
+    android:background="@color/colorBackground"
+    tools:context=".ui.FragmentUserProfile">
 
     <TextView
-        android:id="@+id/resetPhone"
+        android:id="@+id/feedbackForm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="189dp"
@@ -51,7 +25,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/currentPassword"
+        android:id="@+id/firstName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -61,15 +35,16 @@
         android:drawablePadding="16dp"
         android:ems="10"
         android:text="@string/feed_fname"
+        android:textColor="@color/colorWhite"
         android:inputType="text"
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resetPhone" />
+        app:layout_constraintTop_toBottomOf="@+id/feedbackForm" />
 
     <EditText
-        android:id="@+id/newPassword"
+        android:id="@+id/lastName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -78,13 +53,14 @@
         android:background="@drawable/round_border"
         android:drawablePadding="16dp"
         android:ems="10"
+        android:textColor="@color/colorWhite"
         android:inputType="text"
         android:padding="16dp"
         android:text="@string/feed_lname"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/currentPhone" />
+        app:layout_constraintTop_toBottomOf="@+id/firstName" />
 
     <EditText
         android:id="@+id/inputEmail"
@@ -95,6 +71,7 @@
         android:layout_marginEnd="32dp"
         android:background="@drawable/round_border"
         android:drawablePadding="16dp"
+        android:textColor="@color/colorWhite"
         android:ems="10"
         android:enabled="false"
         android:inputType="textEmailAddress"
@@ -103,7 +80,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newPhone" />
+        app:layout_constraintTop_toBottomOf="@+id/lastName" />
 
     <EditText
         android:id="@+id/inputPhone"
@@ -116,6 +93,7 @@
         android:drawablePadding="16dp"
         android:ems="10"
         android:enabled="false"
+        android:textColor="@color/colorWhite"
         android:inputType="phone"
         android:padding="16dp"
         android:text="@string/feed_phone"
@@ -125,7 +103,7 @@
         app:layout_constraintTop_toBottomOf="@+id/inputEmail" />
 
     <Button
-        android:id="@+id/btnResetEmail"
+        android:id="@+id/btnRegister"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"

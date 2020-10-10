@@ -96,5 +96,5 @@
 
     <string name="tab_email">Email</string>
     <string name="tab_password">Password</string>
-    <string name="tab_phone">Password</string>
+    <string name="tab_phone">Phone Number</string>
 </resources>

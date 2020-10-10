@@ -32,7 +32,6 @@
             android:value="@string/google_maps_key" />
 
         <activity android:name=".ResetUserDetails" />
-        <activity android:name=".Feedback" />
         <activity
             android:screenOrientation="portrait"
             android:name=".MapsActivity"
@@ -76,10 +75,7 @@
             android:name=".FoodDetails"
             android:label="@string/title_activity_cart"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:screenOrientation="portrait"
-            android:name=".promosActivity"
-            android:exported="true" />
+
         <activity
             android:screenOrientation="portrait"
             android:name=".promoDetailActivity" />
