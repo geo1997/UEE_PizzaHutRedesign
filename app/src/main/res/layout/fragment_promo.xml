@@ -4,24 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/promos_page"
+    android:background="@color/colorBackground"
     tools:context=".ui.FragmentPromo">
-
-
-    <ImageView
-        android:id="@+id/promoLogo"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_marginTop="50dp"
-        android:focusable="true"
-        android:scaleType="centerCrop"
-        android:src="@drawable/btn_promo" />
-
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/promoLogo"
         android:layout_margin="10dp"
         android:paddingTop="10dp"
         android:elevation="10dp"

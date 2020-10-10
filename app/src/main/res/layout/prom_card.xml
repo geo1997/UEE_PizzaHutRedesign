@@ -3,7 +3,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="10dp"
+    app:cardCornerRadius="20dp"
     app:cardElevation="15dp"
     app:cardUseCompatPadding="true"
     android:layout_centerHorizontal="true"
@@ -18,7 +18,7 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="5dp">
+        android:background="@color/colorBlack">
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/promImage"

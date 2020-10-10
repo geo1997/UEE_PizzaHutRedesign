@@ -3,9 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="10dp"
-    app:cardElevation="15dp"
+    android:backgroundTint="@color/colorBlack"
+    app:cardCornerRadius="30dp"
     app:cardUseCompatPadding="true"
+    app:cardElevation="14dp"
     android:layout_centerHorizontal="true"
     android:id="@+id/promCard">
 
@@ -16,14 +17,15 @@
         android:visibility="invisible"/>
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="5dp">
+        android:alpha="0.9"
+        android:padding="12dp">
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/promImage"
-            android:layout_width="match_parent"
-            android:layout_height="160dp"
+            android:layout_width="435dp"
+            android:layout_height="150dp"
             android:scaleType="centerCrop"
             android:adjustViewBounds="true"
             android:src="@drawable/most_pop_deal1" />
