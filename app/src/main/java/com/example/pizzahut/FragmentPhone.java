@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -39,6 +40,11 @@ public class FragmentPhone extends Fragment {
     public void add(View view){
         if (!validateCurrentPhone() || !validateNewPhone() || !validateConfirmPhone()){
             return;
+        }else {
+            currentPhone.setText("");
+            newPhone.setText("");
+            confirmPhone.setText("");
+            Toast.makeText(getActivity(),"Phone Changed", Toast.LENGTH_LONG).show();
         }
         String currentPhones = currentPhone.getText().toString();
         String newPhones = newPhone.getText().toString();

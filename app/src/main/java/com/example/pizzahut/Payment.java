@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -23,6 +24,14 @@ public class Payment extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.payment_layout);
+
+        ImageView btncart = (ImageView) findViewById(R.id.cartBtn);
+        btncart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Payment.this, Cart.class));
+            }
+        });
 
         cardForm = findViewById(R.id.card_form);
         buy = findViewById(R.id.btnBuy);

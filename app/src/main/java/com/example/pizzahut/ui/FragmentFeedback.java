@@ -9,63 +9,21 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
+import com.example.pizzahut.Feedback;
 import com.example.pizzahut.R;
+import com.example.pizzahut.SignUp;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link FragmentFeedback#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class FragmentFeedback extends Fragment {
 
     EditText firstName, lastName, contact,email,message;
     Button btnAdd;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public FragmentFeedback() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment FragmentFeedback.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static FragmentFeedback newInstance(String param1, String param2) {
-        FragmentFeedback fragment = new FragmentFeedback();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragement_email_layout, container, false);
+        View root = inflater.inflate(R.layout.fragment_feedback, container, false);
 
         firstName = root.findViewById(R.id.fName);
         lastName = root.findViewById(R.id.lName);
@@ -75,7 +33,6 @@ public class FragmentFeedback extends Fragment {
         btnAdd = root.findViewById(R.id.btnfeedback);
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
                 add(v);
@@ -88,6 +45,13 @@ public class FragmentFeedback extends Fragment {
     public void add(View view){
         if (!validatefname() || !validatelname() || !validatecontact() || !validateEmail() ||  !validatemessage()){
             return;
+        }else {
+            firstName.setText("");
+            lastName.setText("");
+            contact.setText("");
+            email.setText("");
+            message.setText("");
+            Toast.makeText(getActivity(),"Feedback Saved", Toast.LENGTH_LONG).show();
         }
     }
 
