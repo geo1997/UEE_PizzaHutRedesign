@@ -51,7 +51,7 @@ public class IntroActivity extends AppCompatActivity implements View.OnClickList
         sharedPreferences = getSharedPreferences("pizzaIntro", MODE_PRIVATE);
         firstTime = sharedPreferences.getBoolean("firstTime", true);
 
-        if (firstTime) {
+//        if (firstTime) {
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     firstTime = false;
 
@@ -61,13 +61,13 @@ public class IntroActivity extends AppCompatActivity implements View.OnClickList
                           introPager.setAdapter(introSliderAdapter);
                           addDotsIndicator(0);
                           introPager.addOnPageChangeListener(viewListener);
-
-               }
-       else {
-           Intent homePage = new Intent(IntroActivity.this, MainActivity.class);
-           startActivity(homePage);
-            finish();
-        }
+//
+//               }
+//       else {
+//           Intent homePage = new Intent(IntroActivity.this, MainActivity.class);
+//           startActivity(homePage);
+//            finish();
+//        }
 
     }
 
@@ -112,7 +112,6 @@ public class IntroActivity extends AppCompatActivity implements View.OnClickList
             }
             else if(position==dots.length-1){
                 skipBtn.setEnabled(true);
-
                 skipBtn.setText("Finish");
             }
             else {
