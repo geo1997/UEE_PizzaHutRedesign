@@ -7,6 +7,7 @@ import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.pizzahut.ui.firstpage.FragmentHomePage;
@@ -15,10 +16,12 @@ import android.widget.Toast;
 
 import com.example.pizzahut.ui.home.HomeFragment;
 
+import prihanofficial.com.kokis.logics.Kokis;
+
 public class Login extends AppCompatActivity {
 
     EditText inputPassword,inputEmail;
-
+  Button buttonLogin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,31 +29,15 @@ public class Login extends AppCompatActivity {
 
         inputPassword = findViewById(R.id.inputPassword);
         inputEmail = findViewById(R.id.inputEmail);
-    }
-
-    public void add(View view){
-        if (!validateEmail() || !validatePassword()){
-            return;
-        }
-        else{
-
-            Toast.makeText(Login.this, "Login Successful", Toast.LENGTH_LONG).show();
-
-//
-//            Fragment someFragment = new Fragment();
-//            FragmentTransaction transaction = getFragmentManager().beginTransaction();
-//            transaction.replace(R.id.fragment_menuid, someFragment ); // give your fragment container id in first parameter
-//            transaction.addToBackStack(null);  // if written, this transaction will be added to backstack
-//            transaction.commit();
+        buttonLogin = findViewById(R.id.btnLogin);
 
 
-
-            Intent intent=new Intent(getApplicationContext(),HomeFragment.class);
-            //intent.putExtra("pos",1);
-            startActivity(intent);
-        }
-        String email = inputEmail.getText().toString();
-        String password = inputPassword.getText().toString();
+        buttonLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                loginUser();
+            }
+        });
     }
 
     private Boolean validateEmail() {
@@ -79,5 +66,15 @@ public class Login extends AppCompatActivity {
             inputPassword.setError(null);
             return true;
         }
+    }
+
+    private void loginUser(){
+     if(validateEmail() && validatePassword()) {
+         Toast.makeText(Login.this, "Login Successful", Toast.LENGTH_LONG).show();
+         Kokis.setKokisBoolean("loginStatus", true);
+         finish();
+     }else {
+         Toast.makeText(Login.this, "Login Failed", Toast.LENGTH_LONG).show();
+     }
     }
 }

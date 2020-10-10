@@ -96,5 +96,11 @@
 
     <string name="tab_email">Email</string>
     <string name="tab_password">Password</string>
+
     <string name="tab_phone">Phone Number</string>
+
+
+    <string name="login1">Login</string>
+    <string name="logout1">Logout</string>
+
 </resources>
