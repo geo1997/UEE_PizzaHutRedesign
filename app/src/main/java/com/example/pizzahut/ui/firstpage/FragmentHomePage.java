@@ -25,6 +25,8 @@ import com.example.pizzahut.model.PromoItem;
 import java.util.ArrayList;
 import java.util.List;
 
+import prihanofficial.com.kokis.logics.Kokis;
+
 
 public class FragmentHomePage extends Fragment {
 
@@ -35,6 +37,7 @@ public class FragmentHomePage extends Fragment {
     private static final String TAG="promoActivity";
     private long backPressedTime;
 
+    Menu menuMe;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -84,13 +87,39 @@ public class FragmentHomePage extends Fragment {
         return root;
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        Boolean status = Kokis.kgetKokisBoolean("loginStatus",false);
+        if (menuMe != null){
 
+            if (status) {
+                menuMe.findItem(R.id.main_logout_icon).setVisible(true);
+                menuMe.findItem(R.id.main_login_icon).setVisible(false);
+                menuMe.findItem(R.id.main_cart_icon).setVisible(false);
+            }else {
+                menuMe.findItem(R.id.main_logout_icon).setVisible(false);
+                menuMe.findItem(R.id.main_login_icon).setVisible(true);
+                menuMe.findItem(R.id.main_cart_icon).setVisible(false);
+            }
+        }
 
+    }
+
+    @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-
+    Boolean status = Kokis.kgetKokisBoolean("loginStatus",false);
         if (menu != null) {
-            menu.findItem(R.id.main_logout_icon).setVisible(true);
-            menu.findItem(R.id.main_cart_icon).setVisible(false);
+            menuMe = menu;
+            if (status) {
+                menu.findItem(R.id.main_logout_icon).setVisible(true);
+                menu.findItem(R.id.main_login_icon).setVisible(false);
+                menu.findItem(R.id.main_cart_icon).setVisible(false);
+            }else {
+                menu.findItem(R.id.main_logout_icon).setVisible(false);
+                menu.findItem(R.id.main_login_icon).setVisible(true);
+                menu.findItem(R.id.main_cart_icon).setVisible(false);
+            }
         }
     }
 }

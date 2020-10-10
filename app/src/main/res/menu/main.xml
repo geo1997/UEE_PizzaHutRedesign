@@ -12,11 +12,20 @@
 
     <item
         android:visible="false"
+        android:id="@+id/main_login_icon"
+        android:orderInCategory="100"
+        android:title="@string/login1"
+        android:iconTint="#000000"
+       android:tooltipText="@string/logout1"
+        app:showAsAction="always" />
+
+    <item
+        android:visible="false"
         android:id="@+id/main_logout_icon"
         android:orderInCategory="100"
-        android:title="logout"
+        android:title="logout1"
         android:iconTint="#000000"
-        android:icon="@drawable/ic_baseline_account_circle_24"
+        android:tooltipText="@string/logout1"
         app:showAsAction="always" />
 </menu>
 
