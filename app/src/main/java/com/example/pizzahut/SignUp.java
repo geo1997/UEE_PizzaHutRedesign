@@ -3,6 +3,7 @@ package com.example.pizzahut;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -22,19 +23,18 @@ public class SignUp extends AppCompatActivity {
         inputPhone = findViewById(R.id.inputPhone);
         inputPassword = findViewById(R.id.inputPassword);
         inputConfPassword = findViewById(R.id.inputConfPassword);
-
-        add();
     }
 
-    public void add(){
-        if (!validateFirstName() || !validateLastName() || !validateEmail() || !validatePhoneNo() || !validatePassword()){
+    public void add(View view){
+        if (!validateFirstName() || !validateLastName() || !validateEmail() || !validatePhoneNo() || !validatePassword() || !validateConfirmPassword()){
             return;
         }
-//        String fname = firstName.getText().toString();
-//        String lname = lastName.getText().toString();
-//        String email = inputEmail.getText().toString();
-//        String phone = inputPhone.getText().toString();
-//        String password = inputPassword.getText().toString();
+        String fname = firstName.getText().toString();
+        String lname = lastName.getText().toString();
+        String email = inputEmail.getText().toString();
+        String phone = inputPhone.getText().toString();
+        String password = inputPassword.getText().toString();
+        String confirmpassword = inputConfPassword.getText().toString();
     }
 
     private Boolean validateFirstName() {
@@ -107,6 +107,21 @@ public class SignUp extends AppCompatActivity {
             return false;
         } else if (!val.matches(passwordVal)) {
             inputPassword.setError("Password is too weak");
+            return false;
+        } else {
+            inputPassword.setError(null);
+            return true;
+        }
+    }
+
+    private Boolean validateConfirmPassword() {
+        String val = inputConfPassword.getText().toString();
+
+        if (val.isEmpty()) {
+            inputConfPassword.setError("Field cannot be empty");
+            return false;
+        } else if (!inputPassword.getText().toString().equals(inputConfPassword.getText().toString())) {
+            inputConfPassword.setError("Password does not match");
             return false;
         } else {
             inputPassword.setError(null);

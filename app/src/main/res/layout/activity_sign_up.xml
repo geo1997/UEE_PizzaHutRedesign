@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login">
+    tools:context=".SignUp">
 
     <View
         android:id="@+id/topView"
@@ -35,7 +35,7 @@
         app:srcCompat="@drawable/pizza_slice" />
 
     <EditText
-        android:id="@+id/firstName"
+        android:id="@+id/currentPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -54,7 +54,7 @@
         app:layout_constraintTop_toBottomOf="@+id/view5" />
 
     <EditText
-        android:id="@+id/lastName"
+        android:id="@+id/newPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -70,7 +70,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/firstName" />
+        app:layout_constraintTop_toBottomOf="@+id/currentPhone" />
 
     <EditText
         android:id="@+id/inputEmail"
@@ -89,7 +89,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lastName" />
+        app:layout_constraintTop_toBottomOf="@+id/newPhone" />
 
     <EditText
         android:id="@+id/inputPhone"
@@ -150,7 +150,7 @@
 
 
     <Button
-        android:id="@+id/btnRegister"
+        android:id="@+id/btnResetEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -158,6 +158,7 @@
         android:layout_marginEnd="32dp"
         android:background="@drawable/round_btn"
         android:text="@string/register"
+        android:onClick="add"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -180,6 +181,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnRegister" />
+        app:layout_constraintTop_toBottomOf="@+id/btnResetPhone" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

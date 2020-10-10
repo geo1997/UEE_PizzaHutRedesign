@@ -18,6 +18,7 @@ public class Checkout extends AppCompatActivity {
 
         TextView txtpaycont = (TextView)findViewById(R.id.payment_txt);
         Button btnCheckout = (Button)findViewById(R.id.button2);
+        TextView txtpaycont11 = (TextView)findViewById(R.id.total_items5);
 
         txtpaycont.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,6 +31,14 @@ public class Checkout extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(Checkout.this, MainActivity.class));
+                Toast.makeText(Checkout.this, "Payment Successfully Completed", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        txtpaycont11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Checkout.this, FoodDetails.class));
                 Toast.makeText(Checkout.this, "Payment Successfully Completed", Toast.LENGTH_LONG).show();
             }
         });

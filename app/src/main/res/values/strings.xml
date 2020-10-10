@@ -93,4 +93,8 @@
     <string name="profile">My Account</string>
     <string name="profile_save">Save</string>
     <string name="btnAddToCart">Add to Cart</string>
+
+    <string name="tab_email">Email</string>
+    <string name="tab_password">Password</string>
+    <string name="tab_phone">Password</string>
 </resources>

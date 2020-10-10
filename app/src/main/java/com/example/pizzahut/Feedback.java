@@ -19,8 +19,6 @@ public class Feedback extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feedback);
-
-        spinner = findViewById(R.id.inqSpinner);
        // spinner.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) this);
     }
 }

@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
-    tools:context=".ui.FragmentFeedback">
+    android:background="@color/colorBackground"
+    tools:context=".Feedback">
 
     <TextView
-        android:id="@+id/feedbackForm"
+        android:id="@+id/resetPhone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="189dp"
@@ -24,26 +24,27 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/firstName"
+        android:id="@+id/fName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/round_border"
         android:drawablePadding="16dp"
         android:ems="10"
-        android:enabled="false"
         android:inputType="text"
         android:padding="16dp"
-        android:text="@string/feed_fname"
+        android:hint="@string/feed_fname"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorWhite"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/feedbackForm" />
+        app:layout_constraintTop_toBottomOf="@+id/resetPhone" />
 
     <EditText
-        android:id="@+id/lastName"
+        android:id="@+id/lName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -52,17 +53,18 @@
         android:background="@drawable/round_border"
         android:drawablePadding="16dp"
         android:ems="10"
-        android:enabled="false"
         android:inputType="text"
         android:padding="16dp"
-        android:text="@string/feed_lname"
+        android:hint="@string/feed_lname"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorWhite"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/firstName" />
+        app:layout_constraintTop_toBottomOf="@+id/fName" />
 
     <EditText
-        android:id="@+id/inputEmail"
+        android:id="@+id/email"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -71,17 +73,18 @@
         android:background="@drawable/round_border"
         android:drawablePadding="16dp"
         android:ems="10"
-        android:enabled="false"
+        android:textColorHint="@color/colorWhite"
         android:inputType="textEmailAddress"
         android:padding="16dp"
-        android:text="@string/feed_email"
+        android:hint="@string/feed_email"
+        android:textColor="@color/colorWhite"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lastName" />
+        app:layout_constraintTop_toBottomOf="@+id/contact" />
 
     <EditText
-        android:id="@+id/inputPhone"
+        android:id="@+id/contact"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -90,28 +93,15 @@
         android:background="@drawable/round_border"
         android:drawablePadding="16dp"
         android:ems="10"
-        android:enabled="false"
         android:inputType="phone"
         android:padding="16dp"
-        android:text="@string/feed_phone"
+        android:textColorHint="@color/colorWhite"
+        android:hint="@string/feed_phone"
+        android:textColor="@color/colorWhite"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputEmail" />
-
-    <Spinner
-        android:id="@+id/inqSpinner"
-        android:layout_width="340dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="1dp"
-        android:entries="@array/spinner_items"
-        android:background="@drawable/round_spinner"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputPhone" />
+        app:layout_constraintTop_toBottomOf="@+id/lName" />
 
     <EditText
         android:id="@+id/editTextTextMultiLine2"
@@ -125,17 +115,19 @@
         android:gravity="center"
         android:hint="@string/message"
         android:inputType="textMultiLine"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorWhite"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.714"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inqSpinner" />
+        app:layout_constraintTop_toBottomOf="@+id/email" />
 
     <Button
-        android:id="@+id/btnRegister"
+        android:id="@+id/btnfeedback"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/round_btn"
         android:text="@string/submit"
@@ -143,7 +135,7 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
