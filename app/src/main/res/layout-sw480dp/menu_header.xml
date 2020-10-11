@@ -8,11 +8,25 @@
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nav_header_name"
+        android:layout_centerVertical="true"
+        android:textSize="30sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textColor="@color/colorRecycler"
+        />
+
+    <TextView
         android:id="@+id/slogan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/navbar_slogan"
         android:layout_alignParentBottom="true"
+        android:textColor="@color/colorRecycler"
         >
 
     </TextView>
