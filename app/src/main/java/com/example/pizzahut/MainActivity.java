@@ -1,5 +1,6 @@
 package com.example.pizzahut;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -20,6 +21,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.example.pizzahut.ui.FragmentFeedback;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.navigation.NavigationView;
 
 import prihanofficial.com.kokis.logics.Kokis;
@@ -48,9 +50,9 @@ public class MainActivity extends AppCompatActivity {
 
 
         //menu hooks
-         drawer = findViewById(R.id.drawer_layout);
-         navigationView = findViewById(R.id.nav_view);
-         contentView = findViewById(R.id.contentmainpage);
+        drawer = findViewById(R.id.drawer_layout);
+        navigationView = findViewById(R.id.nav_view);
+        contentView = findViewById(R.id.contentmainpage);
 
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
@@ -59,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(R.id.nav_menu,
-                R.id.nav_home,R.id.nav_account,R.id.nav_promos,R.id.nav_address,R.id.nav_reset)
+                R.id.nav_home, R.id.nav_account, R.id.nav_promos, R.id.nav_address, R.id.nav_reset)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -74,9 +76,9 @@ public class MainActivity extends AppCompatActivity {
 
         animateNavigationDrawer();
 
-   }
+    }
 
-   //navigation drawer functions
+    //navigation drawer functions
 
     private void animateNavigationDrawer() {
 
@@ -106,14 +108,15 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if(drawer.isDrawerVisible(GravityCompat.START)){
+        if (drawer.isDrawerVisible(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
-        }else{
+        } else {
             super.onBackPressed();
         }
 
     }
-//    @Override
+
+    //    @Override
 //    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 //        switch(item.getItemId()){
 ////            case R.id.nav_storelocator:
@@ -130,6 +133,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
+
+        menuMe = menu;
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
@@ -145,23 +150,47 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
         Fragment fragment = null;
-        if (id==R.id.main_cart_icon){
+        if (id == R.id.main_cart_icon) {
             Intent intent = new Intent(this, Cart.class);
             startActivity(intent);
             return true;
-        }else if(id==R.id.main_login_icon){
-            Intent intent = new Intent(this,Login.class);
+        } else if (id == R.id.main_login_icon) {
+            Intent intent = new Intent(this, Login.class);
             startActivity(intent);
             return true;
-        }else if(id==R.id.main_logout_icon){
+        } else if (id == R.id.main_logout_icon) {
 
-            Toast.makeText(this,"Logged Out",Toast.LENGTH_SHORT).show();
-           finish();
-           startActivity(getIntent());
+            new MaterialAlertDialogBuilder(this,R.style.CustomMaterialDialog)
+                    .setTitle("Logout")
+                    .setMessage("Are you sure you want to log out?")
+                    .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            logOut();
+                        }
+                    })
+                    .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                        }
+                    })
+                    .show();
+
         }
 
         return super.onOptionsItemSelected(item);
     }
 
+    private void logOut() {
+        if (menuMe != null){
+            menuMe.findItem(R.id.main_logout_icon).setVisible(false);
+            menuMe.findItem(R.id.main_login_icon).setVisible(true);
+            menuMe.findItem(R.id.main_cart_icon).setVisible(false);
+        }
+
+        Kokis.setKokisBoolean("loginStatus", false);
+        Toast.makeText(this, "Logged Out", Toast.LENGTH_SHORT).show();
+    }
 
 }
