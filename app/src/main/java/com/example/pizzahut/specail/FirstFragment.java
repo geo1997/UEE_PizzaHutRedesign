@@ -100,14 +100,16 @@ public class FirstFragment extends Fragment {
     private void storeDataToList() {
 
         dataModels = new ArrayList<>();
-        for(int i =0 ; i<20 ;i++){
+        for(int i =0 ; i<6 ;i++) {
             PizzaModel pizzaModel = new PizzaModel();
-            pizzaModel.setPizzaName("Pizza with ginger");
-            pizzaModel.setPizzaSize("Medium");
-            pizzaModel.setPizzaPrize("24,90");
 
+            pizzaModel.setPizzaName("Devilled Chicken");
+            pizzaModel.setPizzaSize("Small");
+            pizzaModel.setPizzaPrize("Rs.410");
             dataModels.add(pizzaModel);
+
         }
+
     }
 
     private void setDataToList() {

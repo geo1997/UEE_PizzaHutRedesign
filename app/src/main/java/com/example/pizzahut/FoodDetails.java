@@ -12,6 +12,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
 public class FoodDetails extends AppCompatActivity {
+
+    ImageView imageViewBack;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +21,7 @@ public class FoodDetails extends AppCompatActivity {
         setContentView(R.layout.activity_food_details);
 
         Button btncont = (Button)findViewById(R.id.cart_btn);
+        imageViewBack = findViewById(R.id.backBtn);
         btncont.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -32,6 +35,14 @@ public class FoodDetails extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(FoodDetails.this, Cart.class));
+            }
+        });
+
+
+        imageViewBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
             }
         });
     }

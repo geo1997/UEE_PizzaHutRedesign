@@ -17,6 +17,7 @@ public class promoDetailActivity extends AppCompatActivity implements View.OnCli
 
     CardView option;
     Button addToCart;
+    ImageView imageViewBack;
 
     private static final String TAG="promoActivity";
     @Override
@@ -28,9 +29,17 @@ public class promoDetailActivity extends AppCompatActivity implements View.OnCli
 
         option=findViewById(R.id.btnPromoOption);
         addToCart=findViewById(R.id.btnAddToCart);
+        imageViewBack = findViewById(R.id.backBtn);
 
         option.setOnClickListener(this);
         addToCart.setOnClickListener(this);
+
+        imageViewBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
     }
 

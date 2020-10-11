@@ -68,15 +68,27 @@
                     android:textSize="15sp"
                     android:textStyle="bold" />
 
-                <ImageView
+                <com.like.LikeButton
+                    app:icon_type="heart"
+
                     android:id="@+id/iv_heart"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_margin="10dp"
                     android:background="@drawable/ic_baseline_favorite_border_24"
+                    android:scaleType="centerCrop"/>
 
-                    android:scaleType="centerCrop" />
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/iv_heart"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_alignParentEnd="true"-->
+<!--                    android:layout_margin="10dp"-->
+<!--                    android:background="@drawable/ic_baseline_favorite_border_24"-->
+
+<!--                    android:scaleType="centerCrop" />-->
 
                 <com.google.android.material.button.MaterialButton
                     android:layout_width="wrap_content"

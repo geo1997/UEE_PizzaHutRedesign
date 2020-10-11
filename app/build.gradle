@@ -48,4 +48,6 @@ dependencies {
     //kokis library for shared preferences
     implementation 'com.prihanofficial:kokis:1.0.0'
 
+    compile 'com.github.jd-alexander:LikeButton:0.2.3'
+
 }

@@ -121,7 +121,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
                         if(task.isSuccessful()){
                             Log.d(TAG, "onComplete: found location!");
                             Location currentLocation = (Location) task.getResult();
-                            Toast.makeText(context, " current location", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(context, " Your location", Toast.LENGTH_SHORT).show();
 
                             moveCamera(new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude()),
                                     DEFAULT_ZOOM,"Current Location");

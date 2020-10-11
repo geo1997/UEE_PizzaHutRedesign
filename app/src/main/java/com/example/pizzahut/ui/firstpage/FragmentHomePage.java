@@ -1,5 +1,6 @@
 package com.example.pizzahut.ui.firstpage;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -18,6 +19,8 @@ import android.widget.Toast;
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.models.SlideModel;
+import com.example.pizzahut.Cart;
+import com.example.pizzahut.Checkout;
 import com.example.pizzahut.R;
 import com.example.pizzahut.adapter.Promo;
 import com.example.pizzahut.model.PromoItem;
@@ -38,6 +41,7 @@ public class FragmentHomePage extends Fragment {
     private long backPressedTime;
 
     Menu menuMe;
+    MenuItem logout;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -83,6 +87,9 @@ public class FragmentHomePage extends Fragment {
         recyclerView.setAdapter(adapter);
 
         setHasOptionsMenu(true);
+
+
+
 
         return root;
     }

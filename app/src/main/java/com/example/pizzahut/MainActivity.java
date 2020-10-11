@@ -6,6 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,6 +22,8 @@ import androidx.navigation.ui.NavigationUI;
 import com.example.pizzahut.ui.FragmentFeedback;
 import com.google.android.material.navigation.NavigationView;
 
+import prihanofficial.com.kokis.logics.Kokis;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
     DrawerLayout drawer;
     NavigationView navigationView;
     LinearLayout contentView;
+    Menu menuMe;
 
 
     @Override
@@ -149,6 +153,11 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(this,Login.class);
             startActivity(intent);
             return true;
+        }else if(id==R.id.main_logout_icon){
+
+            Toast.makeText(this,"Logged Out",Toast.LENGTH_SHORT).show();
+           finish();
+           startActivity(getIntent());
         }
 
         return super.onOptionsItemSelected(item);

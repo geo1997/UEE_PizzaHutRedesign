@@ -27,7 +27,7 @@ public class PizzaAdapter extends ArrayAdapter<PizzaModel> implements View.OnCli
 
     private static class ViewHolder {
         TextView textViewName, textViewSize, textViewPrice;
-        Button orderNow;
+        Button orderNow,heart;
 
     }
 
@@ -66,6 +66,7 @@ public class PizzaAdapter extends ArrayAdapter<PizzaModel> implements View.OnCli
             viewHolder.textViewSize = convertView.findViewById(R.id.tv_medium);
             viewHolder.textViewPrice =  convertView.findViewById(R.id.tv_price);
             viewHolder.orderNow = convertView.findViewById(R.id.x);
+           // viewHolder.heart = convertView.findViewById(R.id.iv_heart);
 
 
             result=convertView;
@@ -91,6 +92,10 @@ public class PizzaAdapter extends ArrayAdapter<PizzaModel> implements View.OnCli
                 singleApplyClick();
             }
         });
+
+
+
+
 
         return convertView;
     }

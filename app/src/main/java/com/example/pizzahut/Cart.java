@@ -2,6 +2,7 @@ package com.example.pizzahut;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -18,12 +19,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+import prihanofficial.com.kokis.logics.Kokis;
+
 public class Cart extends AppCompatActivity {
 
     RecyclerView recyclerView;
     ArrayList<CartItem> cartItems;
 
     ImageView imageViewBack;
+    Menu menuMe;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +70,7 @@ public class Cart extends AppCompatActivity {
         });
 
 
+
     }
 
     public void onLayoutSelected(View view){
@@ -73,4 +78,10 @@ public class Cart extends AppCompatActivity {
         Toast.makeText(this,"Item removed from cart",Toast.LENGTH_SHORT).show();
 
     }
+
+
+
+
+
+
 }

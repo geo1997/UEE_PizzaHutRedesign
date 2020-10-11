@@ -7,12 +7,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class SignUp extends AppCompatActivity {
 
     EditText firstName, lastName, inputEmail, inputPhone, inputPassword, inputConfPassword;
     Button btnRegister;
+    TextView redirectLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,19 @@ public class SignUp extends AppCompatActivity {
         inputPhone = findViewById(R.id.inputPhone);
         inputPassword = findViewById(R.id.inputPassword);
         inputConfPassword = findViewById(R.id.inputConfPassword);
+        redirectLogin = findViewById(R.id.newUser);
+
+
+
+        redirectLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(SignUp.this, Login.class));
+            }
+        });
+
+
+
     }
 
     public void add(View view){

@@ -73,9 +73,9 @@ public class HomeFragment extends Fragment {
 
 
 
+        tabLayout.addTab(tabLayout.newTab().setText("Classic Pizza"));
         tabLayout.addTab(tabLayout.newTab().setText("Appetizers"));
-        tabLayout.addTab(tabLayout.newTab().setText("favorite"));
-        tabLayout.addTab(tabLayout.newTab().setText("Deloitte Pizza"));
+        tabLayout.addTab(tabLayout.newTab().setText("Favorite"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         final MyAdapter adapter = new MyAdapter(context,getChildFragmentManager(), tabLayout.getTabCount());
