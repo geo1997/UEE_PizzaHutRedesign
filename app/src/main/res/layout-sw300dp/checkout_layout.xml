@@ -34,7 +34,16 @@
             android:adjustViewBounds="true"
             app:srcCompat="@drawable/pizzahut" />
 
-
+        <ImageView
+            android:id="@+id/cartBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="right"
+            android:layout_marginStart="73dp"
+            android:layout_marginEnd="6dp"
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/ic_baseline_shopping_cart_24" />
 
     </androidx.appcompat.widget.Toolbar>
 
