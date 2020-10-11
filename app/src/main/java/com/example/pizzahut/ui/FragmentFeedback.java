@@ -9,18 +9,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.pizzahut.R;
-
-
+import com.example.pizzahut.SignUp;
 
 public class FragmentFeedback extends Fragment {
 
     EditText firstName, lastName, contact,email,message;
     Button btnAdd;
-
-
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -35,7 +32,6 @@ public class FragmentFeedback extends Fragment {
         btnAdd = root.findViewById(R.id.btnfeedback);
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
                 add(v);
@@ -48,6 +44,13 @@ public class FragmentFeedback extends Fragment {
     public void add(View view){
         if (!validatefname() || !validatelname() || !validatecontact() || !validateEmail() ||  !validatemessage()){
             return;
+        }else {
+            firstName.setText("");
+            lastName.setText("");
+            contact.setText("");
+            email.setText("");
+            message.setText("");
+            Toast.makeText(getActivity(),"Feedback Saved", Toast.LENGTH_LONG).show();
         }
     }
 

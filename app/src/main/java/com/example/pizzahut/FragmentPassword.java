@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -39,6 +40,11 @@ public class FragmentPassword extends Fragment {
     public void add(View view){
         if (!validateCurrentPassword() || !validateNewPassword() || !validateConfirmPassword() ){
             return;
+        }else {
+            currentPassword.setText("");
+            newPassword.setText("");
+            confirmPassword.setText("");
+            Toast.makeText(getActivity(),"Password Changed", Toast.LENGTH_LONG).show();
         }
         String currentEmails = currentPassword.getText().toString();
         String newEmails = newPassword.getText().toString();

@@ -1,15 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".ui.FragmentUserProfile"
     android:background="@color/colorBackground"
-    tools:context=".ui.FragmentUserProfile">
+    android:clickable="true"
+
+    >
+
+
+<!--   <com.google.android.material.appbar.AppBarLayout-->
+<!--       android:layout_width="match_parent"-->
+<!--       android:layout_height="wrap_content"-->
+<!--       android:theme="@style/AppTheme.AppBarOverlay">-->
+
+<!--      <androidx.appcompat.widget.Toolbar-->
+<!--          android:id="@+id/toolbar"-->
+<!--          android:layout_width="match_parent"-->
+<!--          android:layout_height="?attr/actionBarSize"-->
+<!--          android:background="@color/colorPrimary"-->
+<!--          app:titleTextColor="#000000"-->
+<!--          app:popupTheme="@style/AppTheme.PopupOverlay">-->
+
+<!--         <ImageView-->
+<!--             android:layout_width="wrap_content"-->
+<!--             android:layout_height="40dp"-->
+<!--             android:adjustViewBounds="true"-->
+<!--             app:srcCompat="@drawable/pizzahut" />-->
+
+<!--      </androidx.appcompat.widget.Toolbar>-->
+
+<!--   </com.google.android.material.appbar.AppBarLayout>-->
 
     <TextView
-        android:id="@+id/feedbackForm"
+        android:id="@+id/resetPhone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="189dp"
@@ -25,53 +51,54 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/firstName"
+        android:id="@+id/acclname"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/round_border"
+        android:textColor="@color/colorWhite"
         android:drawablePadding="16dp"
         android:ems="10"
-        android:text="@string/feed_fname"
-        android:textColor="@color/colorWhite"
         android:inputType="text"
         android:padding="16dp"
+        android:text="@string/feed_fname"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/feedbackForm" />
+        app:layout_constraintTop_toBottomOf="@+id/accfname" />
 
     <EditText
-        android:id="@+id/lastName"
+        android:id="@+id/accfname"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
+        android:textColor="@color/colorWhite"
         android:background="@drawable/round_border"
         android:drawablePadding="16dp"
         android:ems="10"
-        android:textColor="@color/colorWhite"
         android:inputType="text"
         android:padding="16dp"
         android:text="@string/feed_lname"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/firstName" />
+        app:layout_constraintTop_toBottomOf="@+id/resetPhone" />
 
     <EditText
-        android:id="@+id/inputEmail"
+        android:id="@+id/accemail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/round_border"
-        android:drawablePadding="16dp"
+        android:textColorHint="@color/colorWhite"
         android:textColor="@color/colorWhite"
+        android:drawablePadding="16dp"
         android:ems="10"
         android:enabled="false"
         android:inputType="textEmailAddress"
@@ -80,34 +107,35 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lastName" />
+        app:layout_constraintTop_toBottomOf="@+id/acclname" />
 
     <EditText
-        android:id="@+id/inputPhone"
+        android:id="@+id/acccontact"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
+        android:textColorHint="@color/colorWhite"
+        android:textColor="@color/colorWhite"
         android:background="@drawable/round_border"
         android:drawablePadding="16dp"
         android:ems="10"
         android:enabled="false"
-        android:textColor="@color/colorWhite"
         android:inputType="phone"
         android:padding="16dp"
         android:text="@string/feed_phone"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/accemail" />
 
     <Button
-        android:id="@+id/btnRegister"
+        android:id="@+id/btnaccsave"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/round_btn"
         android:text="@string/profile_save"
@@ -117,6 +145,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputPhone" />
+        app:layout_constraintTop_toBottomOf="@+id/acccontact" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
