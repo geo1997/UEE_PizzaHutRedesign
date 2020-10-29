@@ -1,4 +1,4 @@
-## Pizza Hut UI Redesign
+## Pizza Hut UI Mobile Application Redesign
 A mobile application developed using android. The goal behind the redesign was to improve the overall user experience of the existing application.
 All the user interfaces were redesigned to provide a more modernized feel, with huge improvements to user experience.
 
